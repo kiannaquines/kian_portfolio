@@ -9,19 +9,12 @@ const pressStart = Press_Start_2P({
   subsets: ["latin"],
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "<Kian Jearard Naquines/>",
+  title: "Kian Jearard Naquines",
   description: "Kian Naquines Portfolio",
+  icons: {
+    icon: "/anime_me.png",
+  },
 };
 
 export default function RootLayout({
@@ -32,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pressStart.variable} antialiased`}
+        className={`${pressStart.variable} antialiased`}
       >
          <ThemeProvider
             attribute="class"

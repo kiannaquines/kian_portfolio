@@ -190,7 +190,7 @@ export default function Home() {
             <Image
               src="/anime_me.jpg"
               alt="Me"
-              className="rounded object-cover cursor-pointer border-4 border-violet-500"
+              className="rounded-full object-cover cursor-pointer border-4 border-violet-500"
               width={390}
               height={280}
             />

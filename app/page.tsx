@@ -11,6 +11,7 @@ import {
   IconBrandGithub,
   IconFile,
 } from "@tabler/icons-react";
+import TechStack from "@/components/tech";
 
 export default function Home() {
   const navItems = [
@@ -128,7 +129,7 @@ export default function Home() {
     <main className="font-[family-name:var(--font-press-start)]">
       <div className="flex flex-col md:flex-row items-center justify-between p-4 bg-white/10 dark:bg-black/25 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-lg shadow-sm px-20">
         <div className="flex items-center space-x-4 mb-4 md:mb-0">
-          <span className="text-[12px] font-bold text-gray-900 dark:text-violet-500">
+          <span className="text-[12px] font-bold text-gray-900 dark:text-white">
             &lt;Kian Naquines/&gt;
           </span>
         </div>
@@ -201,6 +202,8 @@ export default function Home() {
       <section id="timeline-section" className="p-4">
         <Timeline data={data} />
       </section>
+
+      <TechStack/>
     </main>
   );
 }

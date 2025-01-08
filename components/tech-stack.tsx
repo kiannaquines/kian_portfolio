@@ -1,6 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript, SiDocker, SiPostgresql, SiGraphql, SiCplusplus, SiPhp, SiBootstrap, SiFlutter, SiDart, SiLaravel, SiMysql, SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiComposer, SiHeroku, SiJquery, SiFilezilla, SiNginx, SiSqlalchemy, SiSqlite, SiMongodb } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiTypescript, SiDocker, SiPostgresql, SiGraphql, SiCplusplus, SiPhp, SiBootstrap, SiFlutter, SiDart, SiLaravel, SiMysql, SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiComposer, SiHeroku, SiJquery, SiFilezilla, SiNginx, SiSqlalchemy, SiSqlite, SiMongodb, SiScikitlearn, SiTensorflow, SiPandas, SiLinux, SiNpm, SiUbuntu, SiGitforwindows, SiDebian, SiCss3 } from "react-icons/si";
 
 const technologies = [
     { name: "React", icon: <FaReact className="text-6xl text-blue-500" /> },
@@ -33,6 +35,15 @@ const technologies = [
     { name: "SQLAlchemy", icon: <SiSqlalchemy className="text-6xl text-blue-700" /> },
     { name: "SQLite", icon: <SiSqlite className="text-6xl text-blue-700" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-6xl text-green-700" /> },
+    { name: "scikit-learn", icon: <SiScikitlearn className="text-6xl text-blue-500" /> },
+    { name: "TensorFlow", icon: <SiTensorflow className="text-6xl text-orange-500" /> },
+    { name: "Pandas", icon: <SiPandas className="text-6xl text-blue-700" /> },
+    { name: "Linux", icon: <SiLinux className="text-6xl text-white" /> },
+    { name: "NPM", icon: <SiNpm className="text-6xl text-red-700" /> },
+    { name: "Ubuntu", icon: <SiUbuntu className="text-6xl text-orange-700" /> },
+    { name: "Git for Windows", icon: <SiGitforwindows className="text-6xl text-orange-700" /> },
+    { name: "Debian", icon: <SiDebian className="text-6xl text-red-700" /> },
+    { name: "CSS3", icon: <SiCss3 className="text-6xl text-blue-400" /> },
 ];
 
 const TechStack = () => {

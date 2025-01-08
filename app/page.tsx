@@ -3,8 +3,8 @@
 import PrimaryButton from "@/components/ui/primary-button";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import { motion } from "framer-motion";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-import { Timeline } from "@/components/ui/timeline";
+import { IconArrowDown, IconBrandLinkedin, IconBrandTwitter, IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { Timeline } from "@/components/ui/about-timeline";
 import Image from 'next/image';
 import SecondaryButton from "@/components/ui/secondary-button";
 import {
@@ -12,6 +12,7 @@ import {
   IconFile,
 } from "@tabler/icons-react";
 import TechStack from "@/components/tech";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   const navItems = [
@@ -21,7 +22,7 @@ export default function Home() {
       icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Timeline",
+      name: "About",
       link: "/about",
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
@@ -31,10 +32,20 @@ export default function Home() {
       icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Gallery",
-      link: "/gallery",
+      name: "Education",
+      link: "#education",
       icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
+    {
+      name: "Contact",
+      link: "#contact",
+      icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Tech Stack",
+      link: "#tech",
+      icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    }
   ];
 
   const data = [
@@ -127,44 +138,61 @@ export default function Home() {
 
   return (
     <main className="font-[family-name:var(--font-press-start)]">
-      <div className="flex flex-col md:flex-row items-center justify-between p-4 bg-white/10 dark:bg-black/25 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-lg shadow-sm px-20">
-        <div className="flex items-center space-x-4 mb-4 md:mb-0">
-          <span className="text-[12px] font-bold text-gray-900 dark:text-white">
-            &lt;Kian Naquines/&gt;
-          </span>
-        </div>
-
-        <nav className="flex flex-wrap justify-center gap-4">
-          {navItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              className="text-[10px] font-bold text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200"
-            >
-              {item.name}
-            </a>
-          ))}
-        </nav>
-
-        <span className="text-[12px] text-gray-700 font-bold dark:text-gray-300 mt-4 md:mt-0">Asia/Manila</span>
-      </div>
       <HeroHighlight>
+        <div className="flex flex-col md:flex-row items-center justify-between p-4 bg-white/10 dark:bg-black/25 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-lg shadow-sm px-20">
+          <div className="flex items-center space-x-4 mb-4 md:mb-0">
+            <span className="text-[12px] font-bold text-gray-900 dark:text-white">
+              &lt;Kian Naquines/&gt;
+            </span>
+          </div>
+
+          <nav className="flex flex-wrap justify-center gap-4">
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                className="text-[10px] font-bold text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors duration-200"
+              >
+                {item.name}
+              </a>
+            ))}
+          </nav>
+
+          <span className="text-[12px] text-gray-700 font-bold dark:text-gray-300 mt-4 md:mt-0">Asia/Manila</span>
+        </div>
         <section id="hero-section" className="h-screen flex flex-col md:flex-row items-center justify-center gap-8">
-          <div className="text-center md:text-left max-w-2xl">
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10" />
+
+          <div className="text-center md:text-left max-w-2xl z-10">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-              className="text-5xl md:text-5xl font-bold dark:text-white"
+              className="text-5xl md:text-6xl font-bold dark:text-white"
             >
-              Software Developer <span className="text-violet-500">Enthusiast</span>
+              <span>Software Developer</span>
+              <br />
+              <TypeAnimation
+                className="text-violet-500"
+                sequence={[
+                  "Enthusiast",
+                  2000,
+                  "Designer",
+                  2000,
+                  "InfoSys",
+                  2000,
+                ]}
+                speed={30}
+                repeat={Infinity}
+                wrapper="span"
+              />
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
-              className="mt-4 text-md text-neutral-800 dark:text-neutral-300 max-w-3xl"
+              className="mt-6 text-lg text-neutral-800 dark:text-neutral-300 max-w-2xl"
             >
               I'm Kian, a software developer, where I craft fullstack
               applications. After hours, I build my own projects.
@@ -176,22 +204,44 @@ export default function Home() {
               transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.4 }}
               className="mt-8 flex flex-wrap justify-center md:justify-start gap-4"
             >
-              <PrimaryButton title="About Me" className="text-sm" />
-              <PrimaryButton title="GitHub" icon={<IconBrandGithub />} className="text-sm" />
-              <SecondaryButton title="Resume" icon={<IconFile />} className="text-sm" />
+              <PrimaryButton
+                title="About Me"
+                className="text-sm hover:bg-violet-600 transition-colors"
+              />
+              <PrimaryButton
+                title="GitHub"
+                icon={<IconBrandGithub />}
+                className="text-sm hover:bg-violet-600 transition-colors"
+              />
+              <SecondaryButton
+                title="Resume"
+                icon={<IconFile />}
+                className="text-sm shadow-[0_0_20px_10px_rgba(124,58,237,0.3)] hover:bg-violet-600 transition-colors"
+              />
             </motion.div>
+
+            <div className="mt-8 flex justify-center md:justify-start gap-4">
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                <IconBrandGithub className="text-2xl text-neutral-700 dark:text-neutral-300 hover:text-violet-500 dark:hover:text-violet-500 transition-colors" />
+              </a>
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                <IconBrandLinkedin className="text-2xl text-neutral-700 dark:text-neutral-300 hover:text-violet-500 dark:hover:text-violet-500 transition-colors" />
+              </a>
+              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+                <IconBrandTwitter className="text-2xl text-neutral-700 dark:text-neutral-300 hover:text-violet-500 dark:hover:text-violet-500 transition-colors" />
+              </a>
+            </div>
           </div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-            className="mt-8 md:mt-0"
+            animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
+            className="mt-8 md:mt-0 z-10"
           >
             <Image
               src="/anime_me.jpg"
               alt="Me"
-              className="rounded-full object-cover cursor-pointer border-4 border-violet-500"
+              className="rounded-full object-cover cursor-pointer border-4 border-violet-500 shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]"
               width={390}
               height={280}
             />
@@ -199,11 +249,11 @@ export default function Home() {
         </section>
       </HeroHighlight>
 
-      <section id="timeline-section" className="p-4">
+      <section id="timeline-section">
         <Timeline data={data} />
       </section>
 
-      <TechStack/>
+      <TechStack />
     </main>
   );
 }

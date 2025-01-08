@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 import React from "react";
+import { IconArrowDown } from "@tabler/icons-react";
 
 export const HeroHighlight = ({
   children,
@@ -12,11 +13,9 @@ export const HeroHighlight = ({
   className?: string;
   containerClassName?: string;
 }) => {
-  // Track mouse position
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
-  // Update mouse position on mouse move
   function handleMouseMove({
     currentTarget,
     clientX,
@@ -37,10 +36,10 @@ export const HeroHighlight = ({
       )}
       onMouseMove={handleMouseMove}
     >
-      {/* Dot pattern background */}
-      <div className="absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800 pointer-events-none" />
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10" /> */}
 
-      {/* Radial gradient mask on hover */}
+      <div className="absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800 pointer-events-none opacity-50" />
+
       <motion.div
         className="pointer-events-none bg-dot-thick-indigo-500 dark:bg-dot-thick-indigo-500 absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
@@ -58,46 +57,27 @@ export const HeroHighlight = ({
               transparent 100%
             )
           `,
+          boxShadow: `0 0 20px 10px rgba(124, 58, 237, 0.3)`,
         }}
       />
 
-      {/* Content container */}
-      <div className={cn("relative z-20", className)}>{children}</div>
-    </div>
-  );
-};
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
+        className={cn("relative z-20", className)}
+      >
+        {children}
+      </motion.div>
 
-export const Highlight = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <motion.span
-      initial={{
-        backgroundSize: "0% 100%",
-      }}
-      animate={{
-        backgroundSize: "100% 100%",
-      }}
-      transition={{
-        duration: 2,
-        ease: "linear",
-        delay: 0.5,
-      }}
-      style={{
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "left center",
-        display: "inline",
-      }}
-      className={cn(
-        `relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300 dark:from-indigo-500 dark:to-purple-500`,
-        className
-      )}
-    >
-      {children}
-    </motion.span>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <IconArrowDown className="text-2xl text-neutral-700 dark:text-neutral-300" />
+        </motion.div>
+      </div>
+    </div>
   );
 };

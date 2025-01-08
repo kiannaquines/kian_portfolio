@@ -1,13 +1,13 @@
 "use client";
 
-import LearnMoreButton from "@/components/ui/button";
-import { FloatingNavigation } from "@/components/ui/floating-navbar";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
+import PrimaryButton from "@/components/ui/primary-button";
+import { Navigation } from "@/components/ui/navbar";
+import { HeroHighlight } from "@/components/ui/hero-highlight";
 import { motion } from "framer-motion";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { Timeline } from "@/components/ui/timeline";
 import Image from 'next/image';
-import ResumeButton from "@/components/ui/button-resume";
+import SecondaryButton from "@/components/ui/secondary-button";
 
 export default function Home() {
 
@@ -184,11 +184,9 @@ export default function Home() {
   ];
 
   return (
-    <main className="font-[family-name:var(--font-geist-sans)]">
+    <main className="">
       <HeroHighlight>
-        <div className="flex flex-col justify-between align-middle">
-        <FloatingNavigation navItems={navItems} />
-        </div>
+        <Navigation navItems={navItems}  className="font-[family-name:var(--font-press-start)] text-sm"/>
         <section id="hero-section" className=" h-screen flex flex-row items-center justify-center gap-4">
           <div className="flex flex-col justify-items-start align-center">
             <motion.h1
@@ -204,9 +202,9 @@ export default function Home() {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1],
               }}
-              className="text-6xl font-bold dark:text-white max-w-2xl"
+              className="text-6xl font-bold dark:text-white max-w-2xl font-[family-name:var(--font-press-start)]"
             >
-              Software Developer Enthusiast
+              Software Developer <span className="text-violet-500">Enthusiast</span>
             </motion.h1>
 
             <motion.p
@@ -223,7 +221,7 @@ export default function Home() {
                 ease: [0.4, 0.0, 0.2, 1],
                 delay: 0.2,
               }}
-              className="mt-4 text-2xl text-neutral-800 dark:text-neutral-300 max-w-3xl"
+              className="mt-4 text-1xl text-neutral-800 dark:text-neutral-300 max-w-3xl font-[family-name:var(--font-press-start)]"
             >
               I'm Kian, a software developer, where I craft fullstack
               applications. After hours, I build my own projects.
@@ -246,9 +244,9 @@ export default function Home() {
               className="mt-8"
             >
               <div className="flex align-middle justify-items-center gap-2">
-                <LearnMoreButton title="Download Resume" onClick={() => alert('Learn more about me!')} />
-                <ResumeButton title="About Me" onClick={() => alert('Learn more about me!')} />
-                <ResumeButton title="GitHub" onClick={() => alert('Learn more about me!')} />
+                <PrimaryButton title="Download Resume" className="font-[family-name:var(--font-press-start)] text-sm" />
+                <PrimaryButton title="About Me" className="font-[family-name:var(--font-press-start)] text-sm"/>
+                <PrimaryButton title="GitHub" className="font-[family-name:var(--font-press-start)] text-sm" />
               </div>
             </motion.div>
           </div>
@@ -262,8 +260,8 @@ export default function Home() {
               src="/anime_me.jpg" 
               alt="Me" 
               className="rounded object-cover cursor-pointer"
-              width={400} 
-              height={300} 
+              width={390} 
+              height={280} 
             />
           </motion.div>
         </section>

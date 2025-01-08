@@ -70,3 +70,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.press-start-font {
+  font-family: var(--font-press-start);
+}

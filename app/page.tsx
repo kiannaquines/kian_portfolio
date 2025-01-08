@@ -186,7 +186,9 @@ export default function Home() {
   return (
     <main className="font-[family-name:var(--font-geist-sans)]">
       <HeroHighlight>
+        <div className="flex flex-col justify-between align-middle">
         <FloatingNavigation navItems={navItems} />
+        </div>
         <section id="hero-section" className=" h-screen flex flex-row items-center justify-center gap-4">
           <div className="flex flex-col justify-items-start align-center">
             <motion.h1
@@ -202,9 +204,9 @@ export default function Home() {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1],
               }}
-              className="text-7xl font-bold dark:text-white"
+              className="text-6xl font-bold dark:text-white max-w-2xl"
             >
-              Software Developer <br />& <Highlight>Enthusiast</Highlight>
+              Software Developer Enthusiast
             </motion.h1>
 
             <motion.p
@@ -244,9 +246,9 @@ export default function Home() {
               className="mt-8"
             >
               <div className="flex align-middle justify-items-center gap-2">
-                <ResumeButton title="Download Resume" onClick={() => alert('Learn more about me!')} className="mb-4" />
-                <ResumeButton title="About Me" onClick={() => alert('Learn more about me!')} className="mb-4" />
-                <ResumeButton title="GitHub" onClick={() => alert('Learn more about me!')} className="mb-4" />
+                <LearnMoreButton title="Download Resume" onClick={() => alert('Learn more about me!')} />
+                <ResumeButton title="About Me" onClick={() => alert('Learn more about me!')} />
+                <ResumeButton title="GitHub" onClick={() => alert('Learn more about me!')} />
               </div>
             </motion.div>
           </div>

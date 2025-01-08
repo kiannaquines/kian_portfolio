@@ -8,6 +8,15 @@ import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { Timeline } from "@/components/ui/timeline";
 import Image from 'next/image';
 import SecondaryButton from "@/components/ui/secondary-button";
+import {
+  IconArrowWaveRightUp,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeft,
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@tabler/icons-react";
 
 export default function Home() {
 
@@ -183,11 +192,62 @@ export default function Home() {
     },
   ];
 
+  const Skeleton = () => (
+    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100"></div>
+  );
+
+
+  const items = [
+    {
+      title: "The Dawn of Innovation",
+      description: "Explore the birth of groundbreaking ideas and inventions.",
+      header: <Skeleton />,
+      icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Digital Revolution",
+      description: "Dive into the transformative power of technology.",
+      header: <Skeleton />,
+      icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Art of Design",
+      description: "Discover the beauty of thoughtful and functional design.",
+      header: <Skeleton />,
+      icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Power of Communication",
+      description:
+        "Understand the impact of effective communication in our lives.",
+      header: <Skeleton />,
+      icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Pursuit of Knowledge",
+      description: "Join the quest for understanding and enlightenment.",
+      header: <Skeleton />,
+      icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Joy of Creation",
+      description: "Experience the thrill of bringing ideas to life.",
+      header: <Skeleton />,
+      icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+    },
+    {
+      title: "The Spirit of Adventure",
+      description: "Embark on exciting journeys and thrilling discoveries.",
+      header: <Skeleton />,
+      icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    },
+  ];
+
   return (
-    <main className="">
+    <main className="font-[family-name:var(--font-press-start)]">
       <HeroHighlight>
-        <Navigation navItems={navItems}  className="font-[family-name:var(--font-press-start)] text-sm"/>
-        <section id="hero-section" className=" h-screen flex flex-row items-center justify-center gap-4">
+        <Navigation navItems={navItems} className="text-sm" />
+        <section id="hero-section" className="h-screen flex flex-row items-center justify-center gap-4">
           <div className="flex flex-col justify-items-start align-center">
             <motion.h1
               initial={{
@@ -202,7 +262,7 @@ export default function Home() {
                 duration: 0.5,
                 ease: [0.4, 0.0, 0.2, 1],
               }}
-              className="text-6xl font-bold dark:text-white max-w-2xl font-[family-name:var(--font-press-start)]"
+              className="text-6xl font-bold dark:text-white max-w-2xl"
             >
               Software Developer <span className="text-violet-500">Enthusiast</span>
             </motion.h1>
@@ -221,7 +281,7 @@ export default function Home() {
                 ease: [0.4, 0.0, 0.2, 1],
                 delay: 0.2,
               }}
-              className="mt-4 text-1xl text-neutral-800 dark:text-neutral-300 max-w-3xl font-[family-name:var(--font-press-start)]"
+              className="mt-4 text-1xl text-neutral-800 dark:text-neutral-300 max-w-3xl"
             >
               I'm Kian, a software developer, where I craft fullstack
               applications. After hours, I build my own projects.
@@ -244,29 +304,30 @@ export default function Home() {
               className="mt-8"
             >
               <div className="flex align-middle justify-items-center gap-2">
-                <PrimaryButton title="Download Resume" className="font-[family-name:var(--font-press-start)] text-sm" />
-                <PrimaryButton title="About Me" className="font-[family-name:var(--font-press-start)] text-sm"/>
-                <PrimaryButton title="GitHub" className="font-[family-name:var(--font-press-start)] text-sm" />
+                <PrimaryButton title="About Me" className="text-sm" />
+                <PrimaryButton title="GitHub" className="text-sm" />
+                <SecondaryButton title="Resume" className="text-sm" />
               </div>
             </motion.div>
           </div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
-            <Image 
-              src="/anime_me.jpg" 
-              alt="Me" 
+            <Image
+              src="/anime_me.jpg"
+              alt="Me"
               className="rounded object-cover cursor-pointer"
-              width={390} 
-              height={280} 
+              width={390}
+              height={280}
             />
           </motion.div>
         </section>
-        <Timeline data={data} />
       </HeroHighlight>
+      <section id="timeline-section">
+          <Timeline data={data} />
+        </section>
     </main>
   );
 }

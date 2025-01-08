@@ -3,7 +3,7 @@ import React from 'react'
 interface SecondaryButtonProps {
     title: string;
     className?: string;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 

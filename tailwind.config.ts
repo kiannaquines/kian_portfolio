@@ -15,6 +15,7 @@ export default {
 	theme: {
 		extend: {
 			animation: {
+				aurora: "aurora 60s linear infinite",
 				shimmer: "shimmer 2s linear infinite",
 				first: "moveVertical 30s ease infinite",
 				second: "moveInCircle 20s reverse infinite",
@@ -63,6 +64,14 @@ export default {
 					},
 					"100%": {
 						transform: "translateY(-50%)",
+					},
+				},
+				aurora: {
+					from: {
+						backgroundPosition: "50% 50%, 50% 50%",
+					},
+					to: {
+						backgroundPosition: "350% 50%, 350% 50%",
 					},
 				},
 			},

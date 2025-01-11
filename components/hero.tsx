@@ -31,6 +31,10 @@ const Hero = () => {
                             2000,
                             "Engineer",
                             2000,
+                            "Backend Guy",
+                            2000,
+                            "Frontend Guy",
+                            2000,
                         ]}
                         speed={30}
                         repeat={Infinity}

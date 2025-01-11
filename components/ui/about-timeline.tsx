@@ -57,7 +57,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
           />
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-xl md:text-xl max-w-2xl">
-          I've been developing software for 6 years, with hands-on experience in a variety of technologies from backend to frontend.
+          I've been developing software for 6 years and +months, with hands-on experience in a variety of technologies from backend to frontend.
         </p>
       </div>
 

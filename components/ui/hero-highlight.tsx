@@ -73,7 +73,9 @@ export const HeroHighlight = ({
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
         >
-          <IconArrowDown className="text-2xl text-neutral-700 dark:text-neutral-300" />
+          <div className="p-2 rounded-full dark:bg-violet-500 transition-colors shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]">
+            <IconArrowDown className="text-2xl text-neutral-700 dark:text-neutral-300 hover:text-white dark:hover:text-white transition-colors" />
+          </div>
         </motion.div>
       </div>
     </div>

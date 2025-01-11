@@ -36,8 +36,6 @@ export const HeroHighlight = ({
       )}
       onMouseMove={handleMouseMove}
     >
-      {/* <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10" /> */}
-
       <div className="absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800 pointer-events-none opacity-50" />
 
       <motion.div
@@ -65,7 +63,7 @@ export const HeroHighlight = ({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-        className={cn("relative z-20", className)}
+        className={cn("relative z-10", className)}
       >
         {children}
       </motion.div>

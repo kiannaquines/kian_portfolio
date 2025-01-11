@@ -11,8 +11,6 @@ import SecondaryButton from './ui/secondary-button'
 const Hero = () => {
     return (
         <section id="hero-section" className="h-screen flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10" />
-
             <div className="text-center md:text-left max-w-2xl z-10">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}

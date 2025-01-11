@@ -63,11 +63,6 @@ const Hero = () => {
                         icon={<IconUserScan />}
                         className="text-sm hover:bg-violet-600 transition-colors"
                     />
-                    <PrimaryButton
-                        title="GitHub"
-                        icon={<IconBrandGithub />}
-                        className="text-sm hover:bg-violet-600 transition-colors"
-                    />
                     <SecondaryButton
                         title="My Resume"
                         icon={<IconFileTypePdf />}

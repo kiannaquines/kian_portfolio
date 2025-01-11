@@ -5,6 +5,7 @@ import {
   motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 interface AboutTimelineEntry {
   title: string;
@@ -38,7 +39,22 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-4xl md:text-4xl mb-4 text-white font-bold max-w-4xl">
-          My journey as a <span className="text-violet-500">developer</span>
+          My journey as a
+          <br />
+          <TypeAnimation
+            className="text-violet-500"
+            sequence={[
+              "developer",
+              2000,
+              "student",
+              2000,
+              "freelancer",
+              2000,
+            ]}
+            speed={30}
+            repeat={Infinity}
+            wrapper="span"
+          />
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-xl md:text-xl max-w-2xl">
           I've been developing software for 6 years, with hands-on experience in a variety of technologies from backend to frontend.

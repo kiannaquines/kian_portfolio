@@ -18,7 +18,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-                    className="text-5xl md:text-6xl font-bold dark:text-white"
+                    className="text-4xl md:text-4xl font-bold dark:text-white"
                 >
                     <span>Software Developer</span>
                     <br />
@@ -27,9 +27,11 @@ const Hero = () => {
                         sequence={[
                             "Enthusiast",
                             2000,
-                            "Designer",
+                            "UI Designer",
                             2000,
-                            "InfoSys",
+                            "AI Enthusiast",
+                            2000,
+                            "Software Engineer",
                             2000,
                         ]}
                         speed={30}
@@ -42,7 +44,7 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
-                    className="mt-6 text-lg text-neutral-800 dark:text-neutral-300 max-w-2xl"
+                    className="mt-6 text-md text-neutral-800 dark:text-neutral-300 max-w-2xl"
                 >
                     I'm Kian, a software developer, where I craft fullstack
                     applications. After hours, I build my own projects.
@@ -93,7 +95,7 @@ const Hero = () => {
                     alt="Me"
                     className="rounded-full object-cover cursor-pointer border-4 border-violet-500 shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]"
                     width={390}
-                    height={280}
+                    height={270}
                 />
             </motion.div>
         </section>

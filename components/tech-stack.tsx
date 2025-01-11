@@ -41,7 +41,7 @@ const technologies = [
     { name: "Linux", icon: <SiLinux className="text-6xl text-white" /> },
     { name: "NPM", icon: <SiNpm className="text-6xl text-red-700" /> },
     { name: "Ubuntu", icon: <SiUbuntu className="text-6xl text-orange-700" /> },
-    { name: "Git for Windows", icon: <SiGitforwindows className="text-6xl text-orange-700" /> },
+    { name: "Git", icon: <SiGitforwindows className="text-6xl text-orange-700" /> },
     { name: "Debian", icon: <SiDebian className="text-6xl text-red-700" /> },
     { name: "CSS3", icon: <SiCss3 className="text-6xl text-blue-400" /> },
 ];

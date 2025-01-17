@@ -97,7 +97,7 @@ const Hero = () => {
                 <Image
                     src="/anime_me.jpg"
                     alt="Me"
-                    className="rounded object-cover cursor-pointer border-4 border-violet-500 shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]"
+                    className="rounded-md object-cover cursor-pointer border-4 border-violet-500 shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]"
                     width={390}
                     height={270}
                 />

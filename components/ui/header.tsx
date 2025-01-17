@@ -37,9 +37,9 @@ const Header = () => {
     ];
 
     return (
-        <div className="flex flex-col md:flex-row items-center justify-between p-4 bg-white/10 dark:bg-black/25 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-lg shadow-sm px-20">
-            <div className="flex items-center space-x-4 mb-4 md:mb-0">
-                <span className="text-[12px] font-bold text-gray-900 dark:text-white">
+        <div className="flex flex-col md:flex-row items-center justify-evenly p-5 bg-white/10 dark:bg-black/25 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-lg shadow-sm">
+            <div className="flex items-start space-x-4 mb-4 md:mb-0">
+                <span className="text-[10px] font-bold text-gray-900 dark:text-white">
                     &lt;Kian Naquines/&gt;
                 </span>
             </div>
@@ -55,8 +55,7 @@ const Header = () => {
                     </a>
                 ))}
             </nav>
-
-            <span className="text-[12px] text-gray-700 font-bold dark:text-gray-300 mt-4 md:mt-0">Asia/Manila</span>
+            <span className="text-[10px] text-gray-700 font-bold dark:text-gray-300 mt-4 md:mt-0">Asia/Manila</span>
         </div>
     )
 }

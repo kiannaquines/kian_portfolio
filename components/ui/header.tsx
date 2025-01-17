@@ -37,7 +37,7 @@ const Header = () => {
     ];
 
     return (
-        <div className="flex flex-col md:flex-row items-center justify-evenly p-5 bg-white/10 dark:bg-black/25 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-lg shadow-sm">
+        <div className="flex flex-col md:flex-row justify-evenly p-5 bg-white/10 dark:bg-black/25 backdrop-blur-md border border-white/20 dark:border-gray-700/30 rounded-lg shadow-sm">
             <div className="flex items-start space-x-4 mb-4 md:mb-0">
                 <span className="text-[10px] font-bold text-gray-900 dark:text-white">
                     &lt;Kian Naquines/&gt;

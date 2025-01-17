@@ -58,15 +58,15 @@ const Hero = () => {
                     transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.4 }}
                     className="mt-8 flex flex-wrap justify-center md:justify-start gap-4"
                 >
-                    <PrimaryButton
-                        title="About Me"
-                        icon={<IconUserScan />}
-                        className="text-sm hover:bg-violet-600 transition-colors"
-                    />
                     <SecondaryButton
                         title="My Resume"
                         icon={<IconFileTypePdf />}
                         className="text-sm shadow-[0_0_20px_10px_rgba(124,58,237,0.3)] hover:bg-violet-600 transition-colors"
+                    />
+                    <PrimaryButton
+                        title="About Me"
+                        icon={<IconUserScan />}
+                        className="text-sm hover:bg-violet-600 transition-colors"
                     />
                 </motion.div>
 

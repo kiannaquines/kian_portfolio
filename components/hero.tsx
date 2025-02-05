@@ -95,7 +95,7 @@ const Hero = () => {
                 className="mt-8 md:mt-0 z-10"
             >
                 <Image
-                    src="/anime_me.jpg"
+                    src="/anime_me.png"
                     alt="Me"
                     className="rounded-md object-cover cursor-pointer border-4 border-violet-500 shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]"
                     width={390}

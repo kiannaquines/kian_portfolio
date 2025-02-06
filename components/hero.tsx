@@ -15,7 +15,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section id="hero-section" className="px-6 lg:px-[150px] py-[150px]">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-5xl mx-auto">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between max-w-5xl mx-auto gap-3">
         <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-2xl z-10">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ const Hero = () => {
             className="mt-6 text-md text-neutral-800 dark:text-neutral-300"
           >
             I'm Kian, a software developer crafting full-stack web and mobile
-            applications. After hours, I build my own projects.
+            applications. After hours, I build my own projects with ML.
           </motion.p>
 
           <motion.div
@@ -86,8 +86,8 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full hover:bg-violet-500 transition-colors hover:shadow-[0_0_20px_2px_rgba(255,255,255,0.5)]">
-                <IconBrandGithub className="text-2xl text-neutral-700 dark:text-neutral-300 hover:text-white transition-colors" />
+              <div className="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full hover:bg-violet-600 transition-colors hover:shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]">
+                <IconBrandGithub className="text-2xl hover:text-violet-500 transition-colors" />
               </div>
             </a>
             <a
@@ -95,8 +95,8 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full hover:bg-violet-500 transition-colors hover:shadow-[0_0_20px_2px_rgba(255,255,255,0.5)]">
-                <IconBrandLinkedin className="text-2xl text-neutral-700 dark:text-neutral-300 hover:text-white transition-colors" />
+              <div className="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full hover:bg-violet-600 transition-colors hover:shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]">
+                <IconBrandLinkedin className="text-2xl hover:text-violet-500 transition-colors" />
               </div>
             </a>
             <a
@@ -104,8 +104,8 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full hover:bg-violet-500 transition-colors hover:shadow-[0_0_20px_2px_rgba(255,255,255,0.5)]">
-                <IconBrandTwitter className="text-2xl text-neutral-700 dark:text-neutral-300 hover:text-white transition-colors" />
+              <div className="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full hover:bg-violet-600 transition-colors hover:shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]">
+                <IconBrandTwitter className="text-2xl hover:text-violet-500 transition-colors" />
               </div>
             </a>
           </div>

@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import {
@@ -6,6 +8,7 @@ import {
     IconSignature,
     IconTableColumn,
 } from "@tabler/icons-react";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Works() {
     return (
@@ -13,10 +16,23 @@ export default function Works() {
 
             <div className="mx-auto">
                 <h2 className="text-3xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
-                    My <span className="text-violet-500">Projects</span>
+                    My <TypeAnimation
+                        className="text-violet-500"
+                        sequence={[
+                            "Project",
+                            2000,
+                            "Repositiory",
+                            2000,
+                            "Builds",
+                            2000,
+                        ]}
+                        speed={30}
+                        repeat={Infinity}
+                        wrapper="span"
+                    />
                 </h2>
                 <p className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-                    My Projects I personally developed.
+                    My projects I personally love to developed and spent time.
                 </p>
                 <BentoGrid className="max-w-7xl mx-auto md:auto-rows-[20rem]">
                     {items.map((item, i) => (

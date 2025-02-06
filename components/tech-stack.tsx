@@ -76,7 +76,7 @@ const TechStack = () => {
     };
 
     return (
-        <div className="bg-neutral-100 dark:bg-neutral-900 py-12">
+        <div className="py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 className="text-3xl font-bold text-center text-neutral-900 dark:text-white mb-4">
                     Technologies
@@ -89,7 +89,7 @@ const TechStack = () => {
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                 >
                     {technologies.map((tech, index) => (
                         <motion.div

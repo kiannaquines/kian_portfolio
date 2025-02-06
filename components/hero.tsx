@@ -10,13 +10,13 @@ import SecondaryButton from './ui/secondary-button'
 
 const Hero = () => {
     return (
-        <section id="hero-section" className="h-screen flex flex-col md:flex-row items-center justify-evenly gap-9">
+        <section id="hero-section" className="h-screen flex flex-col md:flex-row items-center justify-between gap-9 px-[150px]">
             <div className="text-center md:text-left max-w-2xl z-10">
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-                    className="text-5xl md:text-5xl font-bold dark:text-white max-w-3xl"
+                    className="text-4xl md:text-5xl font-bold dark:text-white max-w-3xl"
                 >
                     <span>Software Developer &</span>
                     <br />
@@ -31,9 +31,7 @@ const Hero = () => {
                             2000,
                             "DevOps",
                             2000,
-                            "Backend",
-                            2000,
-                            "Frontend",
+                            "Full Stack",
                             2000,
                         ]}
                         speed={30}
@@ -41,6 +39,7 @@ const Hero = () => {
                         wrapper="span"
                     />
                 </motion.h1>
+
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -91,7 +90,8 @@ const Hero = () => {
 
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 100, damping: 10 }}
                 className="mt-8 md:mt-0 z-10"
             >
                 <Image
@@ -100,6 +100,7 @@ const Hero = () => {
                     className="rounded-md object-cover cursor-pointer border-4 border-violet-500 shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]"
                     width={390}
                     height={270}
+                    priority
                 />
             </motion.div>
         </section>

@@ -34,7 +34,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full md:px-10 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 backdrop-blur-md"
+      className="w-full md:px-10"
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
@@ -56,8 +56,8 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
             wrapper="span"
           />
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-xl md:text-xl max-w-2xl">
-          I've been developing software for 6 years and +months, with hands-on experience in a variety of technologies from backend to frontend.
+        <p className="text-neutral-700 dark:text-neutral-300 text-xl md:text-xl max-w-3xl">
+          I've been developing software for 6 years and months, with hands-on experience in a variety of technologies from backend to frontend.
         </p>
       </div>
 

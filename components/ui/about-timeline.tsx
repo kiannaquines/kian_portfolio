@@ -34,10 +34,10 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full md:px-10"
+      className="w-full px-[150px]"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto px-4 pt-10 md:px-8 lg:px-10">
+      <div className="mx-auto pt-10">
         <h2 className="text-4xl text-center md:text-4xl text-white font-bold max-w-full">
           My journey as a
           <br />
@@ -62,7 +62,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-10 md:pt-30 md:gap-10"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}

@@ -76,16 +76,16 @@ const TechStack = () => {
     };
 
     return (
-        <div className="py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-12 px-[150px]">
+            <div className="mx-auto">
                 <h2 className="text-3xl font-bold text-center text-neutral-900 dark:text-white mb-4">
-                    Technologies
+                My <span className="text-violet-500">Technologies</span>
                 </h2>
                 <p className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-                    Technologies I've repeat & refined throughout the years.
+                    Technologies I've repeated & refined throughout the years.
                 </p>
                 <motion.div
-                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
+                    className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 max-w-screen-xl mx-auto"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -107,6 +107,7 @@ const TechStack = () => {
                 </motion.div>
             </div>
         </div>
+
     );
 };
 

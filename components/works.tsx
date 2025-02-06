@@ -9,11 +9,11 @@ import {
 
 export default function Works() {
     return (
-        <div className="w-full md:px-10">
+        <div className="w-full px-[150px]">
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto">
                 <h2 className="text-3xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
-                    My Projects
+                    My <span className="text-violet-500">Projects</span>
                 </h2>
                 <p className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
                     My Projects I personally developed.

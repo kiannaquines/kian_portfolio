@@ -24,11 +24,10 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 flex items-center justify-between py-4 md:px-10 lg:px-[150px] backdrop-blur-lg transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/40 dark:bg-black/40 shadow-md border-b border-white/10 dark:border-gray-800"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 flex items-center justify-between py-4 px-5 md:px-5 lg:px-[150px] backdrop-blur-lg transition-all duration-300 ${isScrolled
+          ? "bg-white/70 dark:bg-black/70 shadow-md border-b border-white/10 dark:border-gray-800"
+          : "bg-white/50 dark:bg-black/50"
+        }`}
     >
       <div className="flex items-center space-x-4 md:space-x-6">
         <span className="text-[10px] font-bold text-gray-900 dark:text-white">
@@ -58,9 +57,8 @@ const Header = () => {
 
       {/* Mobile Dropdown Menu */}
       <nav
-        className={`${
-          isMenuOpen ? "flex" : "hidden"
-        } absolute top-16 left-0 right-0 bg-white/80 dark:bg-black/80 backdrop-blur-lg flex-col gap-4 p-6 rounded-lg shadow-lg md:hidden`}
+        className={`${isMenuOpen ? "flex" : "hidden"
+          } absolute top-16 left-0 right-0 bg-white/80 dark:bg-black/80 backdrop-blur-lg flex-col gap-4 p-6 rounded-lg shadow-lg md:hidden`}
       >
         {navItems.map((item, index) => (
           <a

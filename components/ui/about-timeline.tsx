@@ -37,8 +37,8 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
       className="w-full md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-4xl md:text-4xl mb-4 text-white font-bold max-w-4xl">
+      <div className="max-w-7xl mx-auto px-4 pt-10 md:px-8 lg:px-10">
+        <h2 className="text-4xl text-center md:text-4xl text-white font-bold max-w-full">
           My journey as a
           <br />
           <TypeAnimation
@@ -56,9 +56,6 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
             wrapper="span"
           />
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-xl md:text-xl max-w-3xl">
-          I've been developing software for 6 years and months, with hands-on experience in a variety of technologies from backend to frontend.
-        </p>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

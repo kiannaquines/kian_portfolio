@@ -10,11 +10,9 @@ export const HeroHighlight = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  // Motion values for tracking mouse position
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
-  // Handle mouse movement to update the position of the radial gradient
   function handleMouseMove({
     currentTarget,
     clientX,
@@ -27,19 +25,13 @@ export const HeroHighlight = ({
   }
 
   return (
-    <div
-      className={cn(
-        "relative z-10 group", // Added `group` for group-hover functionality
-        className
-      )}
-      onMouseMove={handleMouseMove}
-    >
-      {/* Background Dots */}
-      <div className="absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800 pointer-events-none opacity-50" />
+    <div className={cn("relative z-10 group", className)} onMouseMove={handleMouseMove}>
+      {/* More Visible Background Dots */}
+      <div className="absolute inset-0 bg-dot-thick-neutral-600 dark:bg-dot-thick-neutral-200 pointer-events-none opacity-10" />
 
-      {/* Hover Effect (Radial Gradient) */}
+      {/* Hover Effect */}
       <motion.div
-        className="pointer-events-none bg-dot-thick-indigo-500 dark:bg-dot-thick-indigo-500 absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
+        className="pointer-events-none bg-dot-thick-indigo-500 dark:bg-dot-thick-indigo-500 absolute inset-0 opacity-10"
         style={{
           WebkitMaskImage: useMotionTemplate`
             radial-gradient(
@@ -55,7 +47,6 @@ export const HeroHighlight = ({
               transparent 100%
             )
           `,
-          boxShadow: `0 0 20px 10px rgba(124, 58, 237, 0.3)`,
         }}
       />
 

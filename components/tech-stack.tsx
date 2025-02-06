@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript, SiDocker, SiPostgresql, SiGraphql, SiCplusplus, SiPhp, SiBootstrap, SiFlutter, SiDart, SiLaravel, SiMysql, SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiComposer, SiHeroku, SiJquery, SiFilezilla, SiNginx, SiSqlalchemy, SiSqlite, SiMongodb, SiScikitlearn, SiTensorflow, SiPandas, SiLinux, SiNpm, SiUbuntu, SiGitforwindows, SiDebian, SiCss3 } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiTypescript, SiDocker, SiPostgresql, SiGraphql, SiCplusplus, SiPhp, SiBootstrap, SiFlutter, SiDart, SiLaravel, SiMysql, SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiComposer, SiHeroku, SiJquery, SiFilezilla, SiNginx, SiSqlalchemy, SiSqlite, SiMongodb, SiScikitlearn, SiTensorflow, SiPandas, SiLinux, SiNpm, SiUbuntu, SiGitforwindows, SiDebian, SiCss3, SiNotion, SiLangchain, SiGoogle, SiGooglecolab } from "react-icons/si";
 
 const technologies = [
     { name: "React", icon: <FaReact className="text-6xl text-blue-500" /> },
@@ -44,6 +44,9 @@ const technologies = [
     { name: "Git", icon: <SiGitforwindows className="text-6xl text-orange-700" /> },
     { name: "Debian", icon: <SiDebian className="text-6xl text-red-700" /> },
     { name: "CSS3", icon: <SiCss3 className="text-6xl text-blue-400" /> },
+    { name: "Bash", icon: <SiNotion className="text-6xl" /> },
+    { name: "Google", icon: <SiGoogle className="text-6xl" /> },
+    { name: "Colab", icon: <SiGooglecolab className="text-6xl text-orange-400" /> },
 ];
 
 const TechStack = () => {

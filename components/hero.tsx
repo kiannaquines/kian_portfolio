@@ -29,7 +29,7 @@ const Hero = () => {
                             2000,
                             "AI Enthusiast",
                             2000,
-                            "Engineer",
+                            "DevOps",
                             2000,
                             "Backend Guy",
                             2000,

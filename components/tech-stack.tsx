@@ -99,7 +99,7 @@ const TechStack = () => {
                             custom={index % 2 === 0 ? "right" : "left"}
                         >
                             {tech.icon}
-                            <span className="mt-4 text-[15px] text-center font-medium text-neutral-900 dark:text-white">
+                            <span className="mt-4 text-[14px] text-center font-medium text-neutral-900 dark:text-white">
                                 {tech.name}
                             </span>
                         </motion.div>

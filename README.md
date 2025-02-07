@@ -19,5 +19,5 @@ This project is currently in development.
 
 ## Screenshots
 
-![latest_build_portfolio](https://github.com/user-attachments/assets/0b61e8f4-d0e7-4969-897a-ac98dce2acdb)
-![Capture1](https://github.com/user-attachments/assets/6346d9cc-5f11-4cae-a277-2c5923d5bc21)
+![Image](https://github.com/user-attachments/assets/3192bea8-e0f2-4e56-ad7a-4e072fc4c1d2)
+![Image](https://github.com/user-attachments/assets/d562cc31-11d7-444d-9f1f-367193737fc0)

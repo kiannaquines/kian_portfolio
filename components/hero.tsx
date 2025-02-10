@@ -34,7 +34,7 @@ const Hero = () => {
                 2000,
                 "Freelancer",
                 2000,
-                "DevOps",
+                "DevOps Nerd",
                 2000,
                 "Full Stack",
                 2000,

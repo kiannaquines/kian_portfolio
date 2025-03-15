@@ -1,20 +1,19 @@
 "use client";
 
-import React from 'react'
-import { Timeline } from './ui/about-timeline'
-import Image from 'next/image'
+import React from 'react';
+import { Timeline } from './ui/about-timeline';
 
 const TimeLine = () => {
-
     const data = [
         {
             title: "2024",
             content: (
                 <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus accusantium vel, ipsum provident commodi nulla? Iusto atque a necessitatibus dignissimos eius, perspiciatis dolorum, aspernatur, nulla recusandae accusantium dolorem. Quaerat, consectetur!
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs sm:text-sm md:text-base font-normal mb-6 sm:mb-8">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, neque voluptatem repellendus ipsam possimus ducimus quia itaque quas ratione eligendi atque perferendis vel, modi tempore! Possimus nisi rem facere quibusdam?
+                        Quibusdam quis adipisci nulla iure voluptatem libero eaque tempore eligendi dolorum, aut maiores, alias reiciendis sapiente, earum reprehenderit. At, beatae delectus alias nemo excepturi ab minus laborum necessitatibus voluptatem eum!
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     </div>
                 </div>
@@ -24,14 +23,12 @@ const TimeLine = () => {
             title: "2023",
             content: (
                 <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, voluptatibus? Eaque vel sequi culpa natus fugiat molestias impedit nisi pariatur magni debitis expedita error quo ipsa aliquam, animi quis ipsum?
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs sm:text-sm md:text-base font-normal mb-6 sm:mb-8">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo odio molestias saepe commodi aliquam, voluptate distinctio in facilis voluptatibus provident sapiente recusandae eos enim officia, ea eveniet vitae nesciunt ipsa!
+                        Sint enim veritatis, voluptatibus voluptatum fugiat tenetur magni velit sapiente rerum est nobis, odit atque sed adipisci, inventore dolorum! Fugit laborum suscipit, vel ipsa exercitationem eligendi amet rerum ducimus magnam.
                     </p>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum is for people who are too lazy to write copy. But we are
-                        not. Here are some more example of beautiful designs I built.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     </div>
                 </div>
@@ -41,14 +38,12 @@ const TimeLine = () => {
             title: "2022",
             content: (
                 <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt omnis debitis non eos. Voluptatum, totam hic ullam facilis nemo porro distinctio id, doloribus commodi eveniet, reprehenderit similique expedita eos? Quidem?
+                  
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs sm:text-sm md:text-base font-normal mb-6 sm:mb-8">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut numquam ullam incidunt illo eos nostrum omnis asperiores. Accusamus sequi possimus non repellat tempore voluptatibus velit repellendus, error asperiores odit ex!
+                        Expedita, et ex.
                     </p>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum is for people who are too lazy to write copy. But we are
-                        not. Here are some more example of beautiful designs I built.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     </div>
                 </div>
@@ -58,13 +53,12 @@ const TimeLine = () => {
             title: "2021",
             content: (
                 <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam officiis voluptatibus ad accusantium? Facere, ipsum vitae hic necessitatibus laboriosam nulla aperiam dolor velit natus, ea cupiditate sunt! Qui, ipsa nesciunt.
+                  
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs sm:text-sm md:text-base font-normal mb-6 sm:mb-8">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut numquam ullam incidunt illo eos nostrum omnis asperiores. Accusamus sequi possimus non repellat tempore voluptatibus velit repellendus, error asperiores odit ex!
+                        Expedita, et ex.
                     </p>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, dignissimos odio! Velit, excepturi. Quae eveniet minima assumenda quos? Praesentium natus tempora, neque ipsum accusantium sapiente nam aspernatur suscipit dolorum harum.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     </div>
                 </div>
@@ -74,14 +68,12 @@ const TimeLine = () => {
             title: "2020",
             content: (
                 <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id optio illum tempora consectetur vel eveniet facilis laudantium nulla culpa, magni, labore consequuntur doloribus quia nemo non dolor minima veniam.
+                  
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs sm:text-sm md:text-base font-normal mb-6 sm:mb-8">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut numquam ullam incidunt illo eos nostrum omnis asperiores. Accusamus sequi possimus non repellat tempore voluptatibus velit repellendus, error asperiores odit ex!
+                        Expedita, et ex.
                     </p>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum is for people who are too lazy to write copy. But we are
-                        not. Here are some more example of beautiful designs I built.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     </div>
                 </div>
@@ -91,14 +83,12 @@ const TimeLine = () => {
             title: "2019",
             content: (
                 <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis exercitationem, reprehenderit rerum fugit eius veritatis tempore expedita praesentium ipsum assumenda? Quos, delectus. Praesentium ratione reprehenderit aspernatur beatae, exercitationem nemo totam?
+                  
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs sm:text-sm md:text-base font-normal mb-6 sm:mb-8">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut numquam ullam incidunt illo eos nostrum omnis asperiores. Accusamus sequi possimus non repellat tempore voluptatibus velit repellendus, error asperiores odit ex!
+                        Expedita, et ex.
                     </p>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum is for people who are too lazy to write copy. But we are
-                        not. Here are some more example of beautiful designs I built.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     </div>
                 </div>
@@ -108,15 +98,12 @@ const TimeLine = () => {
             title: "2018",
             content: (
                 <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        I usually run out of copy, but when I see content this big, I try to
-                        integrate lorem ipsum.
+                  
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs sm:text-sm md:text-base font-normal mb-6 sm:mb-8">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut numquam ullam incidunt illo eos nostrum omnis asperiores. Accusamus sequi possimus non repellat tempore voluptatibus velit repellendus, error asperiores odit ex!
+                        Expedita, et ex.
                     </p>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum is for people who are too lazy to write copy. But we are
-                        not. Here are some more example of beautiful designs I built.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     </div>
                 </div>
@@ -125,10 +112,10 @@ const TimeLine = () => {
     ];
 
     return (
-        <section id="timeline-section">
+        <section id="timeline-section" className="w-full px-4 sm:px-6 md:px-12 lg:px-32 py-12 sm:py-20 md:py-28 lg:py-40 mx-auto">
             <Timeline data={data} />
         </section>
-    )
-}
+    );
+};
 
-export default TimeLine
+export default TimeLine;

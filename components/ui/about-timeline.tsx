@@ -53,6 +53,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-20 sm:top-40 self-start max-w-xs md:max-w-sm w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full flex items-center justify-center bg-transparent">

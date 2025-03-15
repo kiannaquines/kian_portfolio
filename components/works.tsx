@@ -12,7 +12,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Works() {
     return (
-        <div className="w-full px-4 sm:px-8 md:px-12 lg:px-[150px]">
+        <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
             <div className="mx-auto">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
                     My <TypeAnimation
@@ -33,7 +33,9 @@ export default function Works() {
                             title={item.title}
                             description={item.description}
                             className={item.className}
-                            icon={item.icon}
+                            image={item.image}
+                            repoLink={item.repoLink}
+                            tags={item.tags}
                         />
                     ))}
                 </BentoGrid>
@@ -45,38 +47,185 @@ export default function Works() {
 const items = [
     {
         title: "Crowd Monitoring Software",
-        description: "Explore the birth of groundbreaking ideas and inventions.",
+        description: "Real-time analytics for crowd movement and density.",
         className: "",
-        icon: <IconClipboardCopy className="h-5 w-5 text-neutral-500" />, 
+        icon: <IconClipboardCopy className="h-5 w-5 text-neutral-500" />,
+        image: "/crowd_monitoring_software.png",
+        repoLink: "https://github.com/yourusername/crowd-monitoring",
+        tags: ["NextJS", "Real-Time", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
-        title: "Radio Station Log Visualization",
-        description: "Dive into the transformative power of technology.",
+        title: "TaraLibrary API",
+        description: "API for managing digital library resources efficiently with crowd monitoring software.",
         className: "",
-        icon: <IconFileBroken className="h-5 w-5 text-neutral-500" />, 
-    },
-    {
-        title: "Financial Management System",
-        description: "Discover the beauty of thoughtful and functional design.",
-        className: "",
-        icon: <IconSignature className="h-5 w-5 text-neutral-500" />, 
+        icon: <IconFileBroken className="h-5 w-5 text-neutral-500" />,
+        image: "/crowd_monitoring_software.png",
+        repoLink: "https://github.com/yourusername/tara-library-api",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Web Application Firewall",
-        description: "Understand the impact of effective communication in our lives.",
+        description: "Protect web applications against security threats.",
         className: "",
-        icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />, 
+        icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />,
+        image: "/images/waf.jpg",
+        repoLink: "https://github.com/yourusername/web-application-firewall",
+        tags: ["Cybersecurity", "Networking", "Security"],
     },
     {
         title: "Domain Driven Design Inspired",
         description: "Learn about structured software architecture.",
         className: "",
-        icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />, 
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ddd.jpg",
+        repoLink: "https://github.com/yourusername/domain-driven-design",
+        tags: ["Software Architecture", "DDD", "Backend"],
+    },
+    {
+        title: "Artificial Intelligence Chatbot",
+        description: "An AI-powered chatbot with NLP capabilities.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["AI", "Chatbot", "NLP"],
+    },
+    {
+        title: "HTTP Status Code API",
+        description: "A simple API for retrieving HTTP status codes.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/http-api.jpg",
+        repoLink: "https://github.com/yourusername/http-status-api",
+        tags: ["API", "Web", "HTTP"],
+    },
+    {
+        title: "Financial Management System",
+        description: "Tool for budgeting, expense tracking, and planning.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/financial-management.jpg",
+        repoLink: "https://github.com/yourusername/financial-management",
+        tags: ["Finance", "Budgeting", "Web App"],
+    },
+    {
+        title: "Web Application Firewall",
+        description: "Understand the impact of effective communication in our lives.",
+        className: "",
+        icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />,
+        image: "/images/waf.jpg",
+        repoLink: "https://github.com/yourusername/web-application-firewall",
+    },
+    {
+        title: "Domain Driven Design Inspired",
+        description: "Learn about structured software architecture.",
+        className: "",
+        icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ddd.jpg",
+        repoLink: "https://github.com/yourusername/domain-driven-design",
     },
     {
         title: "Artificial Intelligence Chatbot",
         description: "Discover the beauty of thoughtful and functional design.",
         className: "",
-        icon: <IconSignature className="h-5 w-5 text-neutral-500" />, 
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "HTTP Status Code API",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Mafar Information System",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Enrollment Management Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Medical Recording Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Booking Management Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Tourism Management Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "School Based Management Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Chemistry Tools Management Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Seaoil Management Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Dormitory Management Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Irrigation Management Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
+    },
+    {
+        title: "Appointment Management Software",
+        description: "Discover the beauty of thoughtful and functional design.",
+        className: "",
+        icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
+        image: "/images/ai-chatbot.jpg",
+        repoLink: "https://github.com/yourusername/ai-chatbot",
     },
 ];

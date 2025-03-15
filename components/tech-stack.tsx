@@ -81,7 +81,7 @@ const TechStack = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 max-w-screen-xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 max-w-screen-xl mx-auto m-0 lg:m-5"
         >
           {technologies.map((tech, index) => (
             <motion.div

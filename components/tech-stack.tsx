@@ -58,7 +58,7 @@ const technologies = [
 
 const TechStack = () => {
   return (
-    <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
+    <div className="w-full sm:px-10 lg:px-28 pt-10 lg:pt-32 mx-auto">
       <div className="mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -80,6 +80,7 @@ const TechStack = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 max-w-screen-xl mx-auto"
         >
           {technologies.map((tech, index) => (

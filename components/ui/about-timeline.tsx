@@ -33,22 +33,19 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto" ref={containerRef}>
-      <div className="mx-auto pt-10">
-        <h2 className="text-3xl sm:text-4xl text-center text-neutral-900 dark:text-white font-bold max-w-full">
-          My journey as a
-          <br />
-          <TypeAnimation
-            className="text-violet-500"
-            sequence={["developer", 2000, "student", 2000, "freelancer", 2000]}
-            speed={30}
-            repeat={Infinity}
-            wrapper="span"
-          />
-        </h2>
-      </div>
-
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <>
+      <div className="w-full sm:px-10 lg:px-28 pb-10 lg:pb-32" ref={containerRef}>
+      <h2 className="text-3xl sm:text-4xl text-center text-neutral-900 dark:text-white font-bold max-w-full">
+        My journey as a
+        <br />
+        <TypeAnimation
+          className="text-violet-500"
+          sequence={["developer", 2000, "student", 2000, "freelancer", 2000]}
+          speed={30}
+          repeat={Infinity}
+          wrapper="span" />
+      </h2>
+    </div><div ref={ref} className="relative max-w-7xl pb-20">
         {data.map((item, index) => (
           <motion.div
             key={index}
@@ -61,13 +58,13 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full flex items-center justify-center bg-transparent">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2 bg-transparent" />
               </div>
-              <h3 className="hidden md:block text-lg md:pl-20 md:text-3xl font-bold text-violet-500 dark:text-white">
+              <h3 className="hidden md:block text-lg md:pl-20 md:text-3xl font-bold text-violet-500 dark:text-white mr-10">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-6 sm:pl-12 md:pl-4 pr-4 w-full">
-              <h3 className="md:hidden block text-xl sm:text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
+              <h3 className="md:hidden block text-xl sm:text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500 mr-10">
                 {item.title}
               </h3>
               {item.content}
@@ -81,10 +78,9 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
         >
           <motion.div
             style={{ height: heightTransform, opacity: opacityTransform }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-white via-white to-transparent from-[0%] via-[10%] rounded-full"
-          />
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-white via-white to-transparent from-[0%] via-[10%] rounded-full" />
         </div>
       </div>
-    </div>
+      </>
   );
 };

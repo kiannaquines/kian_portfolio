@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   IconHome,
   IconUser,
@@ -28,17 +28,15 @@ const Header = () => {
   `fixed top-0 left-0 w-full z-[100] flex items-center gap-10 justify-between
    py-4 px-10 md:px-10 lg:px-28 backdrop-blur-lg
    transition-all duration-300
-   bg-white/30 dark:bg-black/30 shadow-md border-b border-white/10 dark:border-gray-800`
+   bg-white/30 dark:bg-black/30 shadow-md`
 }
     >
-      {/* Logo */}
       <div className="flex items-center">
         <span className="text-sm font-bold text-gray-900 dark:text-white">
           &lt;Kian Naquines/&gt;
         </span>
       </div>
 
-      {/* Desktop Navigation */}
       <nav className="hidden md:flex gap-6 items-center">
         {navItems.map((item, index) => (
           <a
@@ -51,7 +49,6 @@ const Header = () => {
         ))}
       </nav>
 
-      {/* Mobile Menu Toggle */}
       <button
         className="md:hidden text-gray-700 dark:text-gray-300 ml-auto"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -64,7 +61,6 @@ const Header = () => {
         )}
       </button>
 
-      {/* Mobile Navigation */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.nav
@@ -72,13 +68,13 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-16 left-0 right-0 bg-white/80 dark:bg-black/80 backdrop-blur-lg flex-col gap-4 p-6 rounded-lg shadow-lg md:hidden"
+            className="absolute top-16 left-0 right-0 bg-white/50 dark:bg-black/50 backdrop-blur-lg flex-col gap-5 p-6 rounded-lg shadow-lg md:hidden m-2"
           >
             {navItems.map((item, index) => (
               <a
                 key={index}
                 href={item.link}
-                className="flex items-center gap-2 text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition"
+                className="flex items-center gap-2 mb-3 text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.icon} {item.name}
@@ -88,7 +84,6 @@ const Header = () => {
         )}
       </AnimatePresence>
 
-      {/* Timezone */}
       <span className="hidden md:block text-xs text-gray-700 font-bold dark:text-gray-300">
         Asia/Manila
       </span>

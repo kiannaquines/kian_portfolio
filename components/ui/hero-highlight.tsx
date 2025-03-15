@@ -29,12 +29,10 @@ export const HeroHighlight = ({
       className={cn("relative z-10 group", className)}
       onMouseMove={handleMouseMove}
     >
-      {/* Background Dots */}
       <div className="absolute inset-0 bg-dot-thick-neutral-600 dark:bg-dot-thick-neutral-200 pointer-events-none opacity-10" />
 
-      {/* Hover Effect */}
       <motion.div
-        className="pointer-events-none bg-dot-thick-indigo-500 dark:bg-dot-thick-indigo-500 absolute inset-0 opacity-10"
+        className="pointer-events-none bg-dot-thick-violet-500 dark:bg-dot-thick-violet-500 absolute inset-0 opacity-10"
         style={{
           WebkitMaskImage: useMotionTemplate`
             radial-gradient(

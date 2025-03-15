@@ -23,12 +23,11 @@ const Hero = () => {
   return (
     <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
       <div className="flex flex-col md:flex-row-reverse">
-        {/* Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
-          className="w-full md:w-1/2 flex justify-end"
+          className="w-full md:w-1/2 flex justify-center mb-5 sm:justify-end sm:mb-0"
         >
           <div className="relative w-full max-w-[270px] sm:max-w-[400px] aspect-square">
             <Image

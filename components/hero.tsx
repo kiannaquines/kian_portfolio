@@ -42,21 +42,10 @@ const Hero = () => {
               className="rounded-2xl object-cover w-full h-full border-4 border-violet-500 
                         shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
                         transition-all duration-300 ease-in-out 
-                        rotate-2 scale-105 hover:rotate-4 hover:scale-110 
-                        opacity-100 hover:opacity-0"
+                        rotate-2 scale-100 hover:rotate-4 hover:scale-105 
+                        opacity-100"
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-              priority
-            />
-            <Image
-              src="/kian_hover.jpg"
-              alt="Kian's anime-style portrait hover"
-              className="absolute inset-0 rounded-2xl object-cover w-full h-full border-4 border-violet-500 
-                        shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
-                        transition-all duration-300 ease-in-out 
-                        rotate-4 scale-110 opacity-0 hover:opacity-100"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px"
               priority
             />
           </div>

@@ -33,7 +33,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div ref={containerRef}>
+    <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto" ref={containerRef}>
       <div className="mx-auto pt-10">
         <h2 className="text-3xl sm:text-4xl text-center text-neutral-900 dark:text-white font-bold max-w-full">
           My journey as a

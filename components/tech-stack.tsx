@@ -8,7 +8,7 @@ import {
   SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiComposer, 
   SiHeroku, SiJquery, SiFilezilla, SiNginx, SiSqlalchemy, SiSqlite, SiMongodb, 
   SiScikitlearn, SiTensorflow, SiPandas, SiLinux, SiNpm, SiUbuntu, SiGitforwindows, 
-  SiDebian, SiCss3, SiNotion, SiLangchain, SiGoogle, SiGooglecolab 
+  SiDebian, SiCss3, SiNotion, SiGoogle, SiGooglecolab 
 } from "react-icons/si";
 
 const technologies = [
@@ -58,7 +58,7 @@ const technologies = [
 
 const TechStack = () => {
   return (
-    <div id="tech-stack" className="w-full px-4 sm:px-6 md:px-12 lg:px-32 pb-12 sm:py-20 md:pb-28 lg:pb-40 mx-auto">
+    <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
       <div className="mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

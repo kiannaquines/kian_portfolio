@@ -11,6 +11,7 @@ import {
   IconUserScan,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import SecondaryButton from "./ui/secondary-button";
 
 const Hero = () => {
   const socialLinks = [
@@ -21,9 +22,28 @@ const Hero = () => {
 
   return (
     <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
-      <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl gap-12 lg:gap-16">
+      <div className="flex flex-col md:flex-row-reverse">
+        {/* Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          className="w-full md:w-1/2 flex justify-end"
+        >
+          <div className="relative w-full max-w-[270px] sm:max-w-[400px] aspect-square">
+            <Image
+              src="/anime_me.png"
+              alt="Kian's anime-style portrait"
+              className="rounded-lg object-contain w-full h-full border-4 border-violet-500 shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+              priority
+            />
+          </div>
+        </motion.div>
+
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/2 max-w-3xl z-10">
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
@@ -36,7 +56,7 @@ const Hero = () => {
               sequence={[
                 "Cloud Nerd",
                 2000,
-                "Designer",
+                "UI Designer",
                 2000,
                 "Freelancer",
                 2000,
@@ -49,7 +69,7 @@ const Hero = () => {
               repeat={Infinity}
               wrapper="span"
             />
-          </motion.h1>
+          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -68,9 +88,8 @@ const Hero = () => {
           >
             <PrimaryButton title="Resume" className="text-xs sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
             <PrimaryButton title="About Me" icon={<IconUserScan />} className="text-xs sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
-            <PrimaryButton title="Hire Me" className="text-xs sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
+            <SecondaryButton title="Hire Me" className="text-xs sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
           </motion.div>
-
 
           <div className="mt-6 flex justify-center md:justify-start gap-3">
             {socialLinks.map((item, index) => (
@@ -80,32 +99,15 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                className="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full hover:bg-violet-600 hover:text-white transition-colors hover:shadow-[0_0_15px_5px_rgba(124,58,237,0.3)]"
+                className="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full hover:bg-violet-600 hover:text-violet-300 transition-colors hover:shadow-[0_0_15px_5px_rgba(124,58,237,0.3)]"
               >
-                {item.icon}
+                {React.cloneElement(item.icon, {
+                  className: "text-neutral-800 dark:text-neutral-300 hover:text-violet-300",
+                })}
               </a>
             ))}
           </div>
         </div>
-
-        {/* Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 100, damping: 10 }}
-          className="w-full md:w-1/2 flex justify-center sm:justify-end"
-        >
-          <div className="relative w-full max-w-[270px] sm:max-w-[400px] aspect-square">
-            <Image
-              src="/anime_me.png"
-              alt="Kian's anime-style portrait"
-              className="rounded object-contain w-full h-full border-4 border-violet-500 shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-              priority
-            />
-          </div>
-        </motion.div>
       </div>
     </div>
   );

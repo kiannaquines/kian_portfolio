@@ -23,19 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${pressStart.variable} antialiased`}
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+    <body className={`${pressStart.variable} font-sans antialiased bg-background text-foreground`}>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem
+        disableTransitionOnChange
       >
-         <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-      </body>
-    </html>
+        {children}
+      </ThemeProvider>
+    </body>
+  </html>
   );
 }

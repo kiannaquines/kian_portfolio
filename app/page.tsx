@@ -8,18 +8,20 @@ import Works from "@/components/works";
 export default function Home() {
   return (
     <main className="min-h-screen w-full font-[family-name:var(--font-press-start)] relative overflow-hidden">
-      <div className="absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800 pointer-events-none opacity-50" />
-      <HeroHighlight className="relative z-10">
-        {/* Header */}
+      <HeroHighlight className="relative">
         <Header />
-        {/* Hero */}
-        <Hero />
-        {/* Tech Stack */}
-        <TechStack />
-        {/* Timeline */}
-        <TimeLine />
-        {/* Works */}
-        <Works />
+        <section id="hero">
+          <Hero />
+        </section>
+        <section id="tech-stack" className="py-10">
+          <TechStack />
+        </section>
+        <section id="timeline" className="py-10">
+          <TimeLine />
+        </section>
+        <section id="works" className="py-10">
+          <Works />
+        </section>
       </HeroHighlight>
     </main>
   );

@@ -10,23 +10,26 @@ export const HeroHighlight = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  let mouseX = useMotionValue(0);
-  let mouseY = useMotionValue(0);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
 
-  function handleMouseMove({
+  const handleMouseMove = ({
     currentTarget,
     clientX,
     clientY,
-  }: React.MouseEvent<HTMLDivElement>) {
+  }: React.MouseEvent<HTMLDivElement>) => {
     if (!currentTarget) return;
-    let { left, top } = currentTarget.getBoundingClientRect();
+    const { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
-  }
+  };
 
   return (
-    <div className={cn("relative z-10 group", className)} onMouseMove={handleMouseMove}>
-      {/* More Visible Background Dots */}
+    <div
+      className={cn("relative z-10 group", className)}
+      onMouseMove={handleMouseMove}
+    >
+      {/* Background Dots */}
       <div className="absolute inset-0 bg-dot-thick-neutral-600 dark:bg-dot-thick-neutral-200 pointer-events-none opacity-10" />
 
       {/* Hover Effect */}

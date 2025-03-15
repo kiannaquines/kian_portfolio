@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import PrimaryButton from "./ui/primary-button";
 import {
@@ -14,6 +14,8 @@ import Image from "next/image";
 import SecondaryButton from "./ui/secondary-button";
 
 const Hero = () => {
+  const [hovered, setHovered] = useState(false);
+
   const socialLinks = [
     { href: "https://github.com/kiannaquines", icon: <IconBrandGithub />, label: "GitHub" },
     { href: "https://www.linkedin.com/in/kian-jearard-naquines-7406772a8/", icon: <IconBrandLinkedin />, label: "LinkedIn" },
@@ -29,11 +31,30 @@ const Hero = () => {
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
           className="w-full md:w-1/2 flex justify-center mb-5 sm:justify-end sm:mb-0"
         >
-          <div className="relative w-full max-w-[270px] sm:max-w-[400px] aspect-square">
-            <Image
+          <div
+            className="relative w-full max-w-[270px] sm:max-w-[400px] aspect-square"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+           <Image
               src="/anime_me.png"
               alt="Kian's anime-style portrait"
-              className="rounded-lg object-contain w-full h-full border-4 border-violet-500 shadow-[0_0_20px_10px_rgba(124,58,237,0.3)]"
+              className="rounded-2xl object-cover w-full h-full border-4 border-violet-500 
+                        shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
+                        transition-all duration-300 ease-in-out 
+                        rotate-2 scale-105 hover:rotate-4 hover:scale-110 
+                        opacity-100 hover:opacity-0"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+              priority
+            />
+            <Image
+              src="/kian_hover.jpg"
+              alt="Kian's anime-style portrait hover"
+              className="absolute inset-0 rounded-2xl object-cover w-full h-full border-4 border-violet-500 
+                        shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
+                        transition-all duration-300 ease-in-out 
+                        rotate-4 scale-110 opacity-0 hover:opacity-100"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
               priority
@@ -46,7 +67,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold dark:text-white"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold dark:text-white tracking-wide"
           >
             <span>Software Developer</span>
             <br />
@@ -76,7 +97,7 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
             className="mt-6 text-sm sm:text-base text-neutral-800 dark:text-neutral-300"
           >
-            I'm Kian, a software developer crafting full-stack web and mobile applications. After hours, I build my own projects with ML.
+            I'm Kian, a software developer crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and Artificial Intelligence.
           </motion.p>
 
           <motion.div

@@ -7,22 +7,28 @@ import Works from "@/components/works";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full font-[family-name:var(--font-press-start)] relative overflow-hidden">
-      <HeroHighlight className="relative">
-        <Header />
-        <section id="hero">
-          <Hero />
-        </section>
-        <section id="tech-stack" className="py-10">
-          <TechStack />
-        </section>
-        <section id="timeline" className="py-10">
-          <TimeLine />
-        </section>
-        <section id="works" className="py-10">
-          <Works />
-        </section>
-      </HeroHighlight>
-    </main>
+    <div className="grid grid-rows-[auto_1fr] h-screen w-full">
+      {/* Header */}
+      <Header />
+      {/* Main Content */}
+      <main className="mt-[64px]">
+        <HeroHighlight className="relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <section id="hero" className="col-span-1 lg:col-span-3">
+              <Hero />
+            </section>
+            <section id="tech-stack" className="col-span-1 lg:col-span-3">
+              <TechStack />
+            </section>
+            <section id="timeline" className="col-span-1 lg:col-span-3">
+              <TimeLine />
+            </section>
+            <section id="works" className="col-span-1 md:col-span-3">
+              <Works />
+            </section>
+          </div>
+        </HeroHighlight>
+      </main>
+    </div>
   );
 }

@@ -12,16 +12,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navItems = [
     { name: "Home", link: "#hero", icon: <IconHome className="h-4 w-4" /> },
@@ -33,20 +24,17 @@ const Header = () => {
 
   return (
     <header
-      className={`
-        fixed top-0 w-full z-50 flex items-center justify-between
-        py-4 px-5 md:px-10 lg:px-24 backdrop-blur-lg
-        transition-all duration-300
-        ${isScrolled
-          ? "bg-white/70 dark:bg-black/70 shadow-md border-b border-white/10 dark:border-gray-800"
-          : "bg-white/50 dark:bg-black/50"
-        }
-      `}
+    className={
+  `fixed top-0 left-0 w-full z-[100] flex items-center gap-10 justify-between
+   py-4 px-10 md:px-10 lg:px-28 backdrop-blur-lg
+   transition-all duration-300
+   bg-white/30 dark:bg-black/30 shadow-md border-b border-white/10 dark:border-gray-800`
+}
     >
       {/* Logo */}
       <div className="flex items-center">
         <span className="text-sm font-bold text-gray-900 dark:text-white">
-          &lt;Boggyman/&gt;
+          &lt;Kian Naquines/&gt;
         </span>
       </div>
 
@@ -65,7 +53,7 @@ const Header = () => {
 
       {/* Mobile Menu Toggle */}
       <button
-        className="md:hidden text-gray-700 dark:text-gray-300"
+        className="md:hidden text-gray-700 dark:text-gray-300 ml-auto"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle Menu"
       >

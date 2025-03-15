@@ -58,7 +58,7 @@ const technologies = [
 
 const TechStack = () => {
   return (
-    <div id="tech-stack" className="w-full px-4 sm:px-6 md:px-12 lg:px-32 py-12 sm:py-20 md:py-28 lg:py-40 mx-auto">
+    <div id="tech-stack" className="w-full px-4 sm:px-6 md:px-12 lg:px-32 pb-12 sm:py-20 md:pb-28 lg:pb-40 mx-auto">
       <div className="mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

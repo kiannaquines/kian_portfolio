@@ -20,10 +20,8 @@ const Hero = () => {
   ];
 
   return (
-    <div 
-      className="w-full px-4 sm:px-8 lg:px-16 py-20 lg:py-32"
-    >
-      <div className="flex flex-col md:flex-row items-center justify-evenly max-w-6xl mx-auto gap-12 lg:gap-16">
+    <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
+      <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl gap-12 lg:gap-16">
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/2 max-w-3xl z-10">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}

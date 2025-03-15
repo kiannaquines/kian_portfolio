@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-    <body className={`${pressStart.variable} font-sans antialiased bg-background text-foreground`}>
+    <body className={`${pressStart.variable} antialiased bg-background text-foreground font-[family-name:var(--font-press-start)]`}>
       <ThemeProvider
         attribute="class"
         defaultTheme="dark"

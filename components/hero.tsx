@@ -29,10 +29,10 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
-          className="w-full md:w-1/2 flex justify-center mb-5 sm:justify-end sm:mb-0"
+          className="w-full md:w-1/2 flex justify-center mb-5 sm:justify-end sm:mb-5"
         >
           <div
-            className="relative w-full max-w-[270px] sm:max-w-[400px] aspect-square"
+            className="relative w-full max-w-[250px] sm:max-w-[400px] aspect-square"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -43,7 +43,7 @@ const Hero = () => {
                         shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
                         transition-all duration-300 ease-in-out 
                         rotate-2 scale-100 hover:rotate-4 hover:scale-105 
-                        opacity-100"
+                        opacity-100 sm:mb-2"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px"
               priority

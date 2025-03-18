@@ -4,6 +4,7 @@ import Header from "@/components/ui/header";
 import Hero from "@/components/hero";
 import TimeLine from "@/components/timeline";
 import Works from "@/components/works";
+import { ContactForm } from "@/components/ui/contact";
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
             </section>
             <section id="works" className="col-span-1 md:col-span-3">
               <Works />
+            </section>
+            <section id="contact" className="col-span-1 lg:col-span-3">
+              <ContactForm/>
             </section>
           </div>
         </HeroHighlight>

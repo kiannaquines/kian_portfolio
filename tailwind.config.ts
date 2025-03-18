@@ -23,6 +23,9 @@ export default {
 				fourth: "moveHorizontal 40s ease infinite",
 				fifth: "moveInCircle 20s ease infinite",
 			},
+			fontFamily: {
+				neoda: ["Neoda", "sans-serif"],
+			},
 			keyframes: {
 				shimmer: {
 					from: {

@@ -17,7 +17,7 @@ export default function Works() {
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
                     My <TypeAnimation
                         className="text-violet-500"
-                        sequence={["Project", 2000, "Repository", 2000, "Builds", 2000]}
+                        sequence={["Projects", 2000, "Repositories", 2000, "Builds", 2000]}
                         speed={30}
                         repeat={Infinity}
                         wrapper="span"

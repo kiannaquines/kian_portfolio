@@ -22,11 +22,14 @@ export default {
 				third: "moveInCircle 40s linear infinite",
 				fourth: "moveHorizontal 40s ease infinite",
 				fifth: "moveInCircle 20s ease infinite",
-			},
-			fontFamily: {
-				neoda: ["Neoda", "sans-serif"],
+				scroll: 'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
 			},
 			keyframes: {
+				scroll: {
+					to: {
+					  transform: 'translate(calc(-50% - 0.5rem))',
+					},
+				  },
 				shimmer: {
 					from: {
 						backgroundPosition: "0 0",
@@ -67,14 +70,6 @@ export default {
 					},
 					"100%": {
 						transform: "translateY(-50%)",
-					},
-				},
-				aurora: {
-					from: {
-						backgroundPosition: "50% 50%, 50% 50%",
-					},
-					to: {
-						backgroundPosition: "350% 50%, 350% 50%",
 					},
 				},
 			},

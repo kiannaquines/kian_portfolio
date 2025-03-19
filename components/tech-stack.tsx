@@ -90,7 +90,7 @@ const TechStack = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0.1 * index }}
               viewport={{ once: true }}
-              className="flex flex-col items-center p-4 bg-white dark:bg-neutral-800 rounded-lg shadow-md hover:shadow-lg border-neutral-700 dark:border-neutral-700 transition-shadow"
+              className="flex flex-col items-center p-4 bg-white dark:bg-neutral-800 rounded-lg shadow-md hover:shadow-lg border-neutral-700 dark:border-neutral-700 transition-shadow border"
             >
               {tech.icon}
               <span className="mt-4 text-lg text-center font-medium text-neutral-900 dark:text-white">

@@ -4,7 +4,7 @@ import Header from "@/components/ui/header";
 import Hero from "@/components/hero";
 import TimeLine from "@/components/timeline";
 import Works from "@/components/works";
-import { ContactForm } from "@/components/ui/contact";
+import { Footer } from "@/components/ui/footer";
 import { InfiniteMovingCardsFeedback } from "@/components/infinite-project";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       {/* Main Content */}
       <main className="mt-[64px]">
-        <HeroHighlight className="relative">
+        <HeroHighlight className="">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <section id="hero" className="col-span-1 lg:col-span-3">
               <Hero />
@@ -29,10 +29,8 @@ export default function Home() {
             <section id="works" className="col-span-1 md:col-span-3">
               <Works />
             </section>
-            <section id="contact" className="col-span-1 lg:col-span-3">
-              <ContactForm/>
-            </section>
           </div>
+          <Footer/>
         </HeroHighlight>
       </main>
     </div>

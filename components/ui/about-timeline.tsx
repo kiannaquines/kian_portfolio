@@ -33,7 +33,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-      <>
+    <>
       <div className="w-full sm:px-10 lg:px-28 pb-10 lg:pb-5" ref={containerRef}>
         <h1 className="text-5xl text-center text-neutral-900 dark:text-white font-bold max-w-full">
           My journey as a
@@ -46,7 +46,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
             wrapper="span" />
         </h1>
       </div>
-    <div ref={ref} className="relative max-w-7xl pb-10">
+      <div ref={ref} className="relative max-w-7xl pb-10">
         {data.map((item, index) => (
           <motion.div
             key={index}
@@ -75,14 +75,20 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
         ))}
 
         <div
-          style={{ height: height + "px" }}
-          className="absolute left-4 sm:left-6 md:left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          style={{
+            height: height + "px",
+          }}
+          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
           <motion.div
-            style={{ height: heightTransform, opacity: opacityTransform }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-white via-white to-transparent from-[0%] via-[10%] rounded-full" />
+            style={{
+              height: heightTransform,
+              opacity: opacityTransform,
+            }}
+            className="absolute inset-x-0 top-0  w-[2px] bg-white from-[0%] via-[10%] rounded-full"
+          />
         </div>
       </div>
-      </>
+    </>
   );
 };

@@ -36,7 +36,7 @@ const Hero = () => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
-           <Image
+            <Image
               src="/anime_me.png"
               alt="Kian's anime-style portrait"
               className="rounded-2xl object-cover w-full h-full border-4 border-violet-500 
@@ -104,7 +104,7 @@ const Hero = () => {
             <SecondaryButton title="Hire Me" className="text-lg sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
           </motion.div>
 
-          <div className="mt-6 flex justify-center md:justify-start gap-3">
+          <div className="flex space-x-4 mt-8">
             {socialLinks.map((item, index) => (
               <a
                 key={index}
@@ -112,10 +112,10 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                className="p-2 bg-neutral-200 dark:bg-neutral-700 rounded-full hover:bg-violet-600 hover:text-violet-300 transition-colors hover:shadow-[0_0_15px_5px_rgba(124,58,237,0.3)]"
+                className="p-2 bg-neutral-800 rounded-full hover:bg-violet-700 transition-colors"
               >
                 {React.cloneElement(item.icon, {
-                  className: "text-neutral-800 dark:text-neutral-300 hover:text-violet-300",
+                  className: "text-neutral-300 hover:text-white",
                 })}
               </a>
             ))}

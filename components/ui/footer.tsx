@@ -44,7 +44,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.label}
-                  className="p-2 bg-neutral-800 rounded-full hover:bg-violet-700 transition-colors"
+                  className="p-2 bg-neutral-800 rounded-full hover:bg-violet-700 transition-colors relative"
                 >
                   {React.cloneElement(item.icon, {
                     className: "text-neutral-300 hover:text-white",
@@ -54,7 +54,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Contact Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
               <LabelInputContainer>
@@ -94,7 +93,7 @@ export function Footer() {
               />
             </LabelInputContainer>
             <button
-              className="w-full py-3 bg-violet-700 text-white rounded-md hover:bg-violet-800 transition-colors"
+              className="w-full py-3 bg-violet-700 text-white rounded-md hover:bg-violet-800 transition-colors relative"
               type="submit"
             >
               Send Email

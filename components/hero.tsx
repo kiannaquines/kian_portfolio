@@ -43,7 +43,7 @@ const Hero = () => {
                         shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
                         transition-all duration-300 ease-in-out 
                         hover:rotate-4 hover:scale-105 
-                        opacity-100 sm:mb-2"
+                        sm:mb-2"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px"
               priority
@@ -58,16 +58,22 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
             className="text-7xl font-bold dark:text-white tracking-wide"
           >
-            <span>Software Engineer</span>
-            <br />
+            <div className="flex gap-2 m-0">
+              <span>Software</span>
+              <span>Developer</span>
+            </div>
             <TypeAnimation
               className="text-violet-500 text-7xl font-bold dark:text-violet-500"
               sequence={[
                 "Frontend Dev",
                 2000,
-                "Designer",
+                "UI Designer",
                 2000,
                 "Backend Dev",
+                2000,
+                "Frontend Dev",
+                2000,
+                "Mobile Dev",
                 2000,
                 "DevOps",
                 2000,

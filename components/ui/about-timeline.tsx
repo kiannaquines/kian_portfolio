@@ -34,18 +34,19 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
 
   return (
       <>
-      <div className="w-full sm:px-10 lg:px-28 pb-10 lg:pb-32" ref={containerRef}>
-      <h2 className="text-3xl sm:text-4xl text-center text-neutral-900 dark:text-white font-bold max-w-full">
-        My journey as a
-        <br />
-        <TypeAnimation
-          className="text-violet-500"
-          sequence={["developer", 2000, "student", 2000, "freelancer", 2000]}
-          speed={30}
-          repeat={Infinity}
-          wrapper="span" />
-      </h2>
-    </div><div ref={ref} className="relative max-w-7xl pb-20">
+      <div className="w-full sm:px-10 lg:px-28 pb-10 lg:pb-5" ref={containerRef}>
+        <h1 className="text-5xl text-center text-neutral-900 dark:text-white font-bold max-w-full">
+          My journey as a
+          <br />
+          <TypeAnimation
+            className="text-violet-500"
+            sequence={["developer", 2000, "student", 2000, "freelancer", 2000]}
+            speed={30}
+            repeat={Infinity}
+            wrapper="span" />
+        </h1>
+      </div>
+    <div ref={ref} className="relative max-w-7xl pb-10">
         {data.map((item, index) => (
           <motion.div
             key={index}

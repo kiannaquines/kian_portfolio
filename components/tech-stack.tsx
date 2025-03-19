@@ -60,14 +60,14 @@ const TechStack = () => {
   return (
     <div className="w-full sm:px-10 lg:px-28 pt-10 lg:pt-32 mx-auto sm:p-2">
       <div className="mx-auto text-center">
-        <motion.h2
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-neutral-900 dark:text-white mb-4"
+          className="text-5xl font-bold text-neutral-900 dark:text-white mb-4"
         >
           My <span className="text-violet-500">Technologies</span>
-        </motion.h2>
+        </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ const TechStack = () => {
               className="flex flex-col items-center p-4 bg-white dark:bg-neutral-800 rounded-lg shadow-md hover:shadow-lg border-neutral-700 dark:border-neutral-700 transition-shadow"
             >
               {tech.icon}
-              <span className="mt-4 text-sm text-center font-medium text-neutral-900 dark:text-white">
+              <span className="mt-4 text-lg text-center font-medium text-neutral-900 dark:text-white">
                 {tech.name}
               </span>
             </motion.div>

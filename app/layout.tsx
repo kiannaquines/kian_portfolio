@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Press_Start_2P } from "next/font/google";
+import { Tektur } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 
-const pressStart = Press_Start_2P({
+const tektur = Tektur({
   weight: "400",
-  variable: "--font-press-start",
+  variable: "--font-tektur",
   subsets: ["latin"],
 });
 
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-    <body className={`${pressStart.variable} antialiased bg-background text-foreground font-[family-name:var(--font-press-start)]`}>
+    <body className={`${tektur.variable} antialiased bg-background text-foreground font-[family-name:var(--font-tektur)]`}>
       <ThemeProvider
         attribute="class"
         defaultTheme="dark"

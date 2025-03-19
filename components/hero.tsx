@@ -32,7 +32,7 @@ const Hero = () => {
           className="w-full md:w-1/2 flex justify-center mb-5 sm:justify-end sm:mb-5"
         >
           <div
-            className="relative w-full max-w-[250px] sm:max-w-[400px] aspect-square"
+            className="relative w-full max-w-[220px] sm:max-w-[390px] aspect-square"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -42,7 +42,7 @@ const Hero = () => {
               className="rounded-2xl object-cover w-full h-full border-4 border-violet-500 
                         shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
                         transition-all duration-300 ease-in-out 
-                        rotate-2 scale-100 hover:rotate-4 hover:scale-105 
+                        hover:rotate-4 hover:scale-105 
                         opacity-100 sm:mb-2"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px"
@@ -56,22 +56,20 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold dark:text-white tracking-wide"
+            className="text-7xl font-bold dark:text-white tracking-wide"
           >
-            <span>Software Developer</span>
+            <span>Software Engineer</span>
             <br />
             <TypeAnimation
-              className="text-violet-500"
+              className="text-violet-500 text-7xl font-bold dark:text-violet-500"
               sequence={[
-                "Cloud Nerd",
+                "Frontend Dev",
                 2000,
-                "UI Designer",
+                "Designer",
                 2000,
-                "Freelancer",
+                "Backend Dev",
                 2000,
                 "DevOps",
-                2000,
-                "Full Stack",
                 2000,
               ]}
               speed={30}
@@ -84,7 +82,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
-            className="mt-6 text-sm sm:text-base text-neutral-800 dark:text-neutral-300"
+            className="mt-6 text-lg text-neutral-800 dark:text-neutral-300"
           >
             I'm Kian, a software developer crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and Artificial Intelligence.
           </motion.p>
@@ -95,9 +93,9 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.4 }}
             className="mt-6 flex flex-wrap justify-center md:justify-start gap-3"
           >
-            <PrimaryButton title="Resume" className="text-xs sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
-            <PrimaryButton title="About Me" icon={<IconUserScan />} className="text-xs sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
-            <SecondaryButton title="Hire Me" className="text-xs sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
+            <PrimaryButton title="Resume" className="text-lg sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
+            <PrimaryButton title="About Me" icon={<IconUserScan />} className="text-lg sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
+            <SecondaryButton title="Hire Me" className="text-lg sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
           </motion.div>
 
           <div className="mt-6 flex justify-center md:justify-start gap-3">

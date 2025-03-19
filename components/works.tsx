@@ -14,7 +14,7 @@ export default function Works() {
     return (
         <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
             <div className="mx-auto">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
+                <h2 className="text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
                     My <TypeAnimation
                         className="text-violet-500"
                         sequence={["Projects", 2000, "Repositories", 2000, "Builds", 2000]}

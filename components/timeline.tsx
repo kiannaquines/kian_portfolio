@@ -112,7 +112,7 @@ const TimeLine = () => {
     ];
 
     return (
-        <section id="timeline-section" className="w-full px-4 sm:px-6 md:px-12 lg:px-32 py-12 sm:py-20 md:py-28 lg:py-40 mx-auto">
+        <section id="timeline-section" className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-20 md:py-28 lg:pt-30 mx-auto">
             <Timeline data={data} />
         </section>
     );

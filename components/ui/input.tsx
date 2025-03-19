@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { useMotionTemplate, useMotionValue, motion } from "motion/react";
+import { useMotionValue, motion } from "motion/react";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}

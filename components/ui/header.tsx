@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import {
   IconHome,
-  IconUser,
   IconMenu2,
   IconTools,
   IconBriefcase,
@@ -31,7 +30,7 @@ const Header = () => {
 }
     >
       <div className="flex items-center">
-        <span className="text-sm font-bold text-gray-900 dark:text-white">
+        <span className="text-lg font-bold text-gray-900 dark:text-white">
           &lt;Kian Naquines/&gt;
         </span>
       </div>
@@ -41,7 +40,7 @@ const Header = () => {
           <a
             key={index}
             href={item.link}
-            className="text-xs font-bold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition hover:scale-105"
+            className="text-lg font-bold text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition hover:scale-105"
           >
             {item.name}
           </a>
@@ -83,7 +82,7 @@ const Header = () => {
         )}
       </AnimatePresence>
 
-      <span className="hidden md:block text-xs text-gray-700 font-bold dark:text-gray-300">
+      <span className="hidden md:block text-lg text-gray-700 font-bold dark:text-gray-300">
         Asia/Manila
       </span>
     </header>

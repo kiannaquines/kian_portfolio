@@ -22,7 +22,7 @@ export function Footer() {
   return (
     <footer className="w-full bg-neutral-900 text-neutral-100 py-12">
       <div className="container mx-auto px-4">
-        <h1 className="text-5xl text-center text-white font-bold mb-4">
+        <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-white font-bold mb-4">
           Want to <span className="text-violet-700">connect?</span>
         </h1>
         <p className="text-center text-neutral-400 mb-12">

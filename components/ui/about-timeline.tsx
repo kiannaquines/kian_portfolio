@@ -35,7 +35,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
   return (
     <>
       <div className="w-full sm:px-10 lg:px-28 pb-10 lg:pb-5" ref={containerRef}>
-        <h1 className="text-5xl text-center text-neutral-900 dark:text-white font-bold max-w-full">
+        <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-neutral-900 dark:text-white font-bold max-w-full">
           My journey as a
           <br />
           <TypeAnimation
@@ -60,12 +60,12 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full flex items-center justify-center bg-transparent">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2 bg-transparent" />
               </div>
-              <h3 className="hidden md:block text-lg md:pl-20 md:text-3xl font-bold text-violet-500 dark:text-white mr-10">
+              <h3 className="hidden md:block text-lg pl-5 md:pl-20 md:text-3xl font-bold text-violet-500 dark:text-white ml-10">
                 {item.title}
               </h3>
             </div>
 
-            <div className="relative pl-6 sm:pl-12 md:pl-4 pr-4 w-full">
+            <div className="relative pl-6 sm:pl-12 md:pl-4 pr-4 w-full ml-7 mt-3 sm:ml-0 md:ml-0 lg:ml-0 sm:mt-0 md:mt-0 lg:mt-0">
               <h3 className="md:hidden block text-xl sm:text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500 mr-10">
                 {item.title}
               </h3>

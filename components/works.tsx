@@ -14,7 +14,7 @@ export default function Works() {
     return (
         <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
             <div className="mx-auto">
-                <h2 className="text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
+                <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
                     My <TypeAnimation
                         className="text-violet-500"
                         sequence={["Projects", 2000, "Repositories", 2000, "Builds", 2000]}
@@ -23,10 +23,10 @@ export default function Works() {
                         wrapper="span"
                     />
                 </h2>
-                <p className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
+                <p className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-8 max-w-2xl mx-auto p-2 sm:p-0 md:p-0 lg:p-0">
                     My projects I personally love to develop and spend time on.
                 </p>
-                <BentoGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <BentoGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-2 sm:p-0 md:p-0 lg:p-0">
                     {items.map((item, i) => (
                         <BentoGridItem
                             key={i}

@@ -58,12 +58,12 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
             className="text-7xl font-bold dark:text-white tracking-wide"
           >
-            <div className="flex gap-2 m-0">
-              <span>Software</span>
-              <span>Developer</span>
+            <div className="flex flex-col sm:flex-row gap-2 m-0">
+              <span className="text-4xl tracking-wider sm:ml-0 md:ml-0 lg:ml-0 sm:text-lg md:text-xl lg:text-7xl">Software</span>
+              <span className="text-4xl tracking-wider sm:text-lg md:text-xl lg:text-7xl">Engineer</span>
             </div>
             <TypeAnimation
-              className="text-violet-500 text-7xl font-bold dark:text-violet-500"
+              className="text-violet-500 text-4xl sm:text-lg md:text-xl lg:text-7xl font-bold dark:text-violet-500"
               sequence={[
                 "Frontend Dev",
                 2000,
@@ -88,7 +88,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
-            className="mt-6 text-lg text-neutral-800 dark:text-neutral-300"
+            className="mt-6 text-lg p-2 text-neutral-800 dark:text-neutral-300"
           >
             I'm Kian, a software developer crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and Artificial Intelligence.
           </motion.p>

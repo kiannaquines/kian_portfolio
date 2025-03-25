@@ -99,9 +99,19 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.4 }}
             className="mt-6 flex flex-wrap justify-center md:justify-start gap-3"
           >
-            <PrimaryButton title="Resume" className="text-lg sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
-            <PrimaryButton title="About Me" icon={<IconUserScan />} className="text-lg sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
-            <SecondaryButton title="Hire Me" className="text-lg sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
+            <PrimaryButton
+              title="Resume"
+              className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors"
+            />
+            <PrimaryButton
+              title="About Me"
+              icon={<IconUserScan />}
+              className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors"
+            />
+            <SecondaryButton
+              title="Hire Me"
+              className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors"
+            />
           </motion.div>
 
           <div className="flex space-x-4 mt-8">

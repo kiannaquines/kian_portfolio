@@ -12,7 +12,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Works() {
     return (
-        <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
+        <div className="w-full p-2 sm:px-10 lg:px-28 pt-10 mb-10 lg:pt-32 mx-auto sm:p-2">
             <div className="mx-auto">
                 <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
                     My <TypeAnimation
@@ -26,7 +26,7 @@ export default function Works() {
                 <p className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-8 max-w-2xl mx-auto p-2 sm:p-0 md:p-0 lg:p-0">
                     My projects I personally love to develop and spend time on.
                 </p>
-                <BentoGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-2 sm:p-0 md:p-0 lg:p-0">
+                <BentoGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-2 sm:p-0 md:p-0 max-w-screen lg:p-0">
                     {items.map((item, i) => (
                         <BentoGridItem
                             key={i}
@@ -115,6 +115,7 @@ const items = [
         icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/web-application-firewall",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Domain Driven Design Inspired",
@@ -123,6 +124,7 @@ const items = [
         icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/domain-driven-design",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Artificial Intelligence Chatbot",
@@ -131,6 +133,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "HTTP Status Code API",
@@ -139,6 +142,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "MAFAR Information System",
@@ -147,6 +151,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Enrollment Management Software",
@@ -155,6 +160,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Medical Recording Software",
@@ -163,6 +169,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Booking Management Software",
@@ -171,6 +178,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Tourism Management Software",
@@ -179,6 +187,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "School Based Management Software",
@@ -187,6 +196,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Chemistry Tools Management Software",
@@ -195,6 +205,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Seaoil Management Software",
@@ -203,6 +214,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Dormitory Management Software",
@@ -211,6 +223,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Irrigation Management Software",
@@ -219,6 +232,7 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
     {
         title: "Appointment Management Software",
@@ -227,5 +241,6 @@ const items = [
         icon: <IconSignature className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/ai-chatbot",
+        tags: ["API", "Library", "Database","MYSQL","MQTT","Microservices","Python", "FastAPI"],
     },
 ];

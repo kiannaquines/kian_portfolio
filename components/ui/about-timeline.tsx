@@ -34,7 +34,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
 
   return (
     <>
-      <div className="w-full sm:px-10 lg:px-28 pb-10 lg:pb-5" ref={containerRef}>
+      <div className="w-full p-2 sm:px-10 lg:px-28 pt-10 lg:pt-32 mx-auto sm:p-2" ref={containerRef}>
         <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-neutral-900 dark:text-white font-bold max-w-full">
           My journey as a
           <br />
@@ -46,7 +46,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
             wrapper="span" />
         </h1>
       </div>
-      <div ref={ref} className="relative max-w-7xl pb-10">
+      <div ref={ref} className="relative max-w-screen pb-10">
         {data.map((item, index) => (
           <motion.div
             key={index}

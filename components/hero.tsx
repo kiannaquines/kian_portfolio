@@ -24,7 +24,7 @@ const Hero = () => {
 
   return (
     <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
-      <div className="flex flex-col md:flex-row-reverse">
+      <div className="flex flex-col md:flex-row-reverse justify-between">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <div className="flex flex-col items-center md:items-start text-center md:text-left w-full md:w-1/2 max-w-3xl z-10">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left lg:text-left w-full md:w-1/2 max-w-3xl z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -33,7 +33,7 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
             className="font-bold dark:text-white tracking-wide"
           >
-            <span className="text-[50px] tracking-wider sm:text-4xl md:text-4xl lg:text-6xl lg:inline-block lg:ml-0">Software <span className="text-violet-400">Engineer</span> </span>
+            <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-6xl lg:inline-block lg:ml-0">Software <span className="text-violet-400">Engineer</span> </span>
             <br />
             <TypeAnimation
               className="text-violet-500 text-[40px] sm:text-lg md:text-xl lg:text-6xl font-bold dark:text-violet-400 hidden lg:inline-block"
@@ -87,7 +87,7 @@ const Hero = () => {
           className="w-full flex justify-center md:justify-end"
         >
           <div
-            className="relative w-full max-w-[220px] sm:max-w-[390px] aspect-square hidden lg:inline-block"
+            className="relative w-full max-w-[220px] sm:max-w-[390px] aspect-square hidden sm:inline-block md:inline-block lg:inline-block"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >

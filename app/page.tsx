@@ -12,7 +12,7 @@ export default function Home() {
     <div className="grid grid-rows-1 h-screen w-full">
       <Header />
       <main className="mt-[64px]">
-        <HeroHighlight>
+        <HeroHighlight containerClassName="min-h-height" >
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-10">
             <section id="hero" className="col-span-1 lg:col-span-1">
               <Hero />

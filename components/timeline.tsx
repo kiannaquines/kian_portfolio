@@ -17,8 +17,8 @@ const TimeLine = () => {
                             <li>Implemented microservices and CI/CD pipelines for scalable applications using Docker and Github.</li>
                             <li>Enrolled in <b>Introduction to Front-End Development</b>.</li>
                             <li>Enrolled in <b>Introduction to Back-End Development</b>.</li>
-                            <li>Implemented Domain Driven Design Architecture for Laravel Application.</li>
-                            <li>Developed my portfolio using NextJS, ReactJS, Shadcn/UI, AceternityUI.</li>
+                            <li>Implemented <b>Domain Driven Design Architecture</b> for Laravel Application.</li>
+                            <li>Developed my portfolio using <b>NextJS</b>, <b>ReactJS</b>, <b>Shadcn/UI</b>, <b>AceternityUI</b>.</li>
                         </ul>
 
                         <div className="space-y-2">
@@ -106,19 +106,19 @@ const TimeLine = () => {
 
                     <div className="space-y-2">
                         <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Client Feedback</h3>
-                        <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
+                        <blockquote className="border-l-4 border-neutral-300 dark:border-violet-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
                             "You're a life saver."
                         </blockquote>
 
-                        <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
+                        <blockquote className="border-l-4 border-neutral-300 dark:border-violet-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
                             "Definitely recommendable."
                         </blockquote>
 
-                        <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
+                        <blockquote className="border-l-4 border-neutral-300 dark:border-violet-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
                             "Easy to work with."
                         </blockquote>
 
-                        <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
+                        <blockquote className="border-l-4 border-neutral-300 dark:border-violet-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
                             "Greate design."
                         </blockquote>
                     </div>
@@ -171,7 +171,6 @@ const TimeLine = () => {
                         </ul>
                     </div>
 
-
                     <div className="space-y-2">
                         <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Projects</h3>
                         <ul className="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
@@ -182,7 +181,7 @@ const TimeLine = () => {
 
                     <div className="space-y-2">
                         <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Client Feedback</h3>
-                        <blockquote className="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
+                        <blockquote className="border-l-4 border-neutral-300 dark:border-violet-600 pl-4 italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
                             "Delivered beyond expectations with excellent communication throughout the project lifecycle."
                         </blockquote>
                     </div>

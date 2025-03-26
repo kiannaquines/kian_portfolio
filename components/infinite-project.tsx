@@ -118,7 +118,7 @@ export const InfiniteMovingCards = ({
 
 export function InfiniteMovingCardsFeedback() {
     return (
-        <div className="rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+        <div className="rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden mb-10">
             <InfiniteMovingCards
                 items={feedbackList}
                 direction="right"

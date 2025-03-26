@@ -54,7 +54,6 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
               className="text-violet-600 dark:text-violet-400"
               sequence={[
                 "developer", 2000, 
-                "problem solver", 2000, 
                 "innovator", 2000,
                 "freelancer", 2000
               ]}

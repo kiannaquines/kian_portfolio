@@ -9,24 +9,22 @@ import { InfiniteMovingCardsFeedback } from "@/components/infinite-project";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[auto_1fr] h-screen w-full">
-      {/* Header */}
+    <div className="grid grid-rows-1 h-screen w-full">
       <Header />
-      {/* Main Content */}
       <main className="mt-[64px]">
         <HeroHighlight>
-          <div className="grid grid-cols gap-10">
-            <section id="hero" className="col-span-1 lg:col-span-3">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-10">
+            <section id="hero" className="col-span-1 lg:col-span-1">
               <Hero />
               <InfiniteMovingCardsFeedback/>
             </section>
-            <section id="tech-stack" className="col-span-1 lg:col-span-3">
+            <section id="tech-stack" className="col-span-1 lg:col-span-1">
               <TechStack />
             </section>
-            <section id="timeline" className="col-span-1 lg:col-span-3">
+            <section id="timeline" className="col-span-1 lg:col-span-1">
               <TimeLine />
             </section>
-            <section id="works" className="col-span-1 md:col-span-3">
+            <section id="works" className="col-span-1 md:col-span-1">
               <Works />
             </section>
           </div>

@@ -83,7 +83,7 @@ export function Footer() {
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="space-y-6 lg:col-span-2">
+          <div className="space-y-6">
             <h2 className="text-2xl font-bold">About Me</h2>
             <div className="space-y-4">
               <p className="text-neutral-400">
@@ -130,7 +130,7 @@ export function Footer() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 lg:col-span-2">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <LabelInputContainer>
                 <Label htmlFor="firstName" className="text-neutral-300">First name</Label>

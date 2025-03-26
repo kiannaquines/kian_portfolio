@@ -87,7 +87,7 @@ const Hero = () => {
           className="w-full flex justify-center md:justify-end"
         >
           <div
-            className="relative w-full max-w-[220px] sm:max-w-[390px] aspect-square"
+            className="relative w-full max-w-[220px] sm:max-w-[390px] aspect-square hidden lg:inline-block"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >

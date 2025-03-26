@@ -20,10 +20,10 @@ export function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-neutral-900 text-neutral-100 py-5">
-      <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
+    <footer className="w-full px-5 sm:px-0 md:px-0 lg:px-0 bg-neutral-900 text-neutral-100 py-5">
+      <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-5 mx-auto">
         <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center text-white font-bold mb-4">
-          Want to <span className="text-violet-700">connect?</span>
+          Want to <span className="text-violet-400">connect?</span>
         </h1>
         <p className="text-center text-neutral-400 mb-12">
           Fill out the form below and I will get back to you as soon as possible.

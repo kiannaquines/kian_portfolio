@@ -12,11 +12,11 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Works() {
     return (
-        <div className="w-full p-2 sm:px-10 lg:px-28 pt-10 mb-10 lg:pt-32 mx-auto sm:p-2">
+        <div className="w-full p-2 sm:px-10 lg:px-28 pt-10 mb-10 lg:pt-0 mx-auto sm:p-2">
             <div className="mx-auto">
                 <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
                     My <TypeAnimation
-                        className="text-violet-500"
+                        className="text-violet-400"
                         sequence={["Projects", 2000, "Repositories", 2000, "Builds", 2000]}
                         speed={30}
                         repeat={Infinity}

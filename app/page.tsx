@@ -14,8 +14,8 @@ export default function Home() {
       <Header />
       {/* Main Content */}
       <main className="mt-[64px]">
-        <HeroHighlight className="">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <HeroHighlight>
+          <div className="grid grid-cols gap-10">
             <section id="hero" className="col-span-1 lg:col-span-3">
               <Hero />
               <InfiniteMovingCardsFeedback/>

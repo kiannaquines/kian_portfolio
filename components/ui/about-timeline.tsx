@@ -47,7 +47,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4">
             My journey as a
             <br />
             <TypeAnimation

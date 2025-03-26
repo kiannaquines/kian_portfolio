@@ -15,6 +15,8 @@ const TimeLine = () => {
                         <ul className="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
                             <li>Mastered advanced programming paradigms and software development architecture.</li>
                             <li>Implemented microservices and CI/CD pipelines for scalable applications using Docker and Github.</li>
+                            <li>Enrolled in <b>Introduction to Front-End Development</b>.</li>
+                            <li>Enrolled in <b>Introduction to Back-End Development</b>.</li>
                             <li>Implemented Domain Driven Design Architecture for Laravel Application.</li>
                             <li>Developed my portfolio using NextJS, ReactJS, Shadcn/UI, AceternityUI.</li>
                         </ul>
@@ -70,6 +72,8 @@ const TimeLine = () => {
                             <li>Developed privacy-conscious crowd detection using WiFi probe requests</li>
                             <li>Created real-time visualization dashboards with WebSockets</li>
                             <li>Deployed scalable IoT infrastructure using Docker containers</li>
+                            <li>Enrolled in <b>Agile Project Management</b>. </li>
+                            <li>Enrolled in <b>Google AI Essentials</b>. </li>
                         </ul>
                     </div>
 
@@ -289,7 +293,7 @@ const TimeLine = () => {
     ];
 
     return (
-        <section id="timeline-section" className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-10 sm:py-20 md:py-28 lg:pt-20 mx-auto">
+        <section id="timeline-section" className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-10 sm:pt-20 md:pt-28 lg:pt-20 mx-auto">
             <Timeline data={data} />
         </section>
     );

@@ -58,7 +58,7 @@ const technologies = [
 
 const TechStack = () => {
   return (
-    <div className="w-full p-2 sm:px-10 lg:px-28 pt-10 lg:pt-32 mx-auto sm:p-2">
+    <div className="w-full p-2 sm:px-10 lg:px-28 pt-0 lg:pt-0 mx-auto sm:p-2">
       <div className="mx-auto text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ const TechStack = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-4"
         >
-          My <span className="text-violet-500">Technologies</span>
+          My <span className="text-violet-400">Technologies</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ const TechStack = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0.1 * index }}
               viewport={{ once: true }}
-              className="flex flex-col items-center p-4 bg-white dark:bg-neutral-800 rounded-lg shadow-md hover:shadow-lg border-neutral-700 dark:border-neutral-700 transition-shadow border"
+              className="flex flex-col items-center p-4 bg-white dark:bg-neutral-900 rounded-lg shadow-md hover:shadow-lg border-neutral-700 dark:border-neutral-700 transition-shadow border"
             >
               {tech.icon}
               <span className="mt-4 text-lg text-center font-medium text-neutral-900 dark:text-white">
@@ -103,5 +103,4 @@ const TechStack = () => {
     </div>
   );
 };
-
 export default TechStack;

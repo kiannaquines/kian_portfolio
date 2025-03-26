@@ -9,6 +9,8 @@ import {
   IconX,
 } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +18,8 @@ const Header = () => {
   const navItems = [
     { name: "Home", link: "#hero", icon: <IconHome className="h-4 w-4" /> },
     { name: "Technologies", link: "#tech", icon: <IconTools className="h-4 w-4" /> },
-    { name: "Projects", link: "#projects", icon: <IconBriefcase className="h-4 w-4" /> },
+    { name: "Journey", link: "#timeline", icon: <IconBriefcase className="h-4 w-4" /> },
+    { name: "Works", link: "#works", icon: <IconBriefcase className="h-4 w-4" /> },
     { name: "Contact", link: "#contact", icon: <IconMail className="h-4 w-4" /> },
   ];
 
@@ -31,7 +34,7 @@ const Header = () => {
     >
       <div className="flex items-center">
         <span className="text-lg font-bold text-gray-900 dark:text-white">
-          &lt;Kian Naquines/&gt;
+         <Link href="/"> &lt;Kian Naquines/&gt;</Link>
         </span>
       </div>
 

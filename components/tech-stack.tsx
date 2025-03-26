@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
-import { 
-  SiNextdotjs, SiTailwindcss, SiTypescript, SiDocker, SiPostgresql, SiGraphql, 
-  SiCplusplus, SiPhp, SiBootstrap, SiFlutter, SiDart, SiLaravel, SiMysql, 
-  SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiComposer, 
-  SiHeroku, SiJquery, SiFilezilla, SiNginx, SiSqlalchemy, SiSqlite, SiMongodb, 
-  SiScikitlearn, SiTensorflow, SiPandas, SiLinux, SiNpm, SiUbuntu, SiGitforwindows, 
+import {
+  SiNextdotjs, SiTailwindcss, SiTypescript, SiDocker, SiPostgresql, SiGraphql,
+  SiCplusplus, SiPhp, SiBootstrap, SiFlutter, SiDart, SiLaravel, SiMysql,
+  SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiComposer,
+  SiHeroku, SiJquery, SiFilezilla, SiNginx, SiSqlalchemy, SiSqlite, SiMongodb,
+  SiScikitlearn, SiTensorflow, SiPandas, SiLinux, SiNpm, SiUbuntu, SiGitforwindows,
   SiDebian, SiCss3, SiNotion, SiGoogle, SiGooglecolab
 } from "react-icons/si";
 
@@ -64,22 +64,20 @@ const TechStack = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-neutral-900 dark:text-white mb-6
-                     md:text-5xl lg:text-6xl"
+          className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-6"
         >
           My <span className="text-violet-500 bg-gradient-to-r from-violet-500 to-purple-600 bg-clip-text text-transparent">Technologies</span>
         </motion.h1>
-        
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-neutral-600 dark:text-neutral-400 text-lg mb-12 mx-auto
-                     md:text-xl md:max-w-2xl"
+          className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-8 max-w-2xl mx-auto p-2 sm:p-0 md:p-0 lg:p-0"
         >
           Technologies I've mastered and refined throughout my journey.
         </motion.p>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -96,22 +94,48 @@ const TechStack = () => {
               key={tech.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.2, delay: 0.05 * index }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center p-4 bg-white dark:bg-neutral-800/80 
-                         rounded-xl shadow-sm hover:shadow-md transition-all duration-300
-                         border border-neutral-200 dark:border-neutral-700
-                         hover:border-violet-400 dark:hover:border-violet-500
-                         group"
+              whileHover={{ y: -8, scale: 1.03 }}
+              transition={{
+                duration: 0.3,
+                delay: 0.05 * index,
+                hover: { duration: 0.2 }
+              }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="relative overflow-hidden p-6 rounded-2xl bg-gradient-to-br from-white/80 to-white/20 dark:from-neutral-900/90 dark:to-neutral-800/50
+               shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.15)]
+               border border-neutral-100 dark:border-neutral-700/80
+               backdrop-blur-sm hover:border-violet-400/50 dark:hover:border-violet-500/50
+               group transition-all duration-300"
             >
-              <div className="w-12 h-12 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                {tech.icon}
-              </div>
-              <span className="text-sm font-medium text-neutral-800 dark:text-neutral-200
-                              md:text-base">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-violet-100/10 to-transparent 
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <motion.div
+                className="w-14 h-14 mb-4 flex items-center justify-center mx-auto relative z-10"
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              >
+                <div className="absolute inset-0 bg-violet-500/10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
+                <div className="text-3xl text-violet-600 dark:text-violet-400 relative z-10">
+                  {tech.icon}
+                </div>
+              </motion.div>
+
+              <motion.span
+                className="block text-center font-medium text-neutral-700 dark:text-neutral-300 text-lg
+                bg-clip-text bg-gradient-to-r from-neutral-600 to-neutral-900 dark:from-neutral-300 dark:to-neutral-100
+                relative"
+                whileHover={{
+                  backgroundImage: "linear-gradient(to right, #7c3aed, #a78bfa)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+              >
                 {tech.name}
-              </span>
+              </motion.span>
+
+              <div className="absolute inset-0 rounded-2xl border border-violet-400/20 dark:border-violet-500/20 
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </motion.div>
           ))}
         </motion.div>

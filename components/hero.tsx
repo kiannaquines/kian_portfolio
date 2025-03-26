@@ -61,7 +61,7 @@ const Hero = () => {
           >
             <PrimaryButton title="Resume" className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors p-3 lg:p-0" />
             <PrimaryButton title="About Me" icon={<IconUserScan />} className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
-            <SecondaryButton title="Hire Me" className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
+            <SecondaryButton onClick={() => window.location.href = 'mailto:kjgnaquines@gmail.com'} title="Hire Me" className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
           </motion.div>
 
           <div className="flex space-x-4 mt-8">

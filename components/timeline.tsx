@@ -6,7 +6,7 @@ import { Timeline } from './ui/about-timeline';
 const TimeLine = () => {
     const data = [
         {
-            title: "2025",
+            title: "Current Year",
             subtitle: "Advanced Specialization in Software, AI, and Mobile Development",
             content: (
                 <div className="space-y-4">

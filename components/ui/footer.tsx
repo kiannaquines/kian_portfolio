@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "./label";
 import { Input } from "./input";
 import { cn } from "@/lib/utils";
@@ -8,9 +8,56 @@ import { Textarea } from "./textarea";
 import { IconBrandGithub, IconBrandLinkedin, IconBrandTwitter, IconMail, IconMapPin, IconPhone } from "@tabler/icons-react";
 
 export function Footer() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    
+    if (!formData.firstName.trim() || !formData.lastName.trim() || 
+        !formData.email.trim() || !formData.message.trim()) {
+      setSubmitStatus('error');
+      return;
+    }
+    
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setSubmitStatus('error');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ firstName: "", lastName: "", email: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialLinks = [
@@ -26,18 +73,17 @@ export function Footer() {
   ];
 
   return (
-    <footer className="w-full px-5 bg-neutral-900 text-neutral-100 py-12">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer id="contact" className="w-full bg-neutral-900 text-neutral-100">
+      <div className="w-full max-w-8xl mx-auto px-10 sm:px-6 lg:pl-28 lg:pr-28 lg:pt-10 pt-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-center text-white font-bold mb-4">
           Want to <span className="text-violet-400">connect?</span>
         </h1>
-        <p className="text-center text-neutral-400 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-10 max-w-2xl mx-auto p-2 sm:p-0 md:p-0 lg:p-0">
           Fill out the form below or reach out directly through my contact information.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-
-          <div className="space-y-6">
+          <div className="space-y-6 lg:col-span-2">
             <h2 className="text-2xl font-bold">About Me</h2>
             <div className="space-y-4">
               <p className="text-neutral-400">
@@ -84,24 +130,30 @@ export function Footer() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6 lg:col-span-2">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <LabelInputContainer>
-                <Label htmlFor="firstname" className="text-neutral-300">First name</Label>
+                <Label htmlFor="firstName" className="text-neutral-300">First name</Label>
                 <Input
-                  id="firstname"
+                  id="firstName"
                   placeholder="Juan"
                   type="text"
+                  value={formData.firstName}
+                  onChange={handleChange}
                   className="mt-1 bg-neutral-800 border-neutral-700 text-neutral-100 focus:border-violet-500 focus:ring-violet-500"
+                  required
                 />
               </LabelInputContainer>
               <LabelInputContainer>
-                <Label htmlFor="lastname" className="text-neutral-300">Last name</Label>
+                <Label htmlFor="lastName" className="text-neutral-300">Last name</Label>
                 <Input
-                  id="lastname"
+                  id="lastName"
                   placeholder="Dela Cruz"
                   type="text"
+                  value={formData.lastName}
+                  onChange={handleChange}
                   className="mt-1 bg-neutral-800 border-neutral-700 text-neutral-100 focus:border-violet-500 focus:ring-violet-500"
+                  required
                 />
               </LabelInputContainer>
             </div>
@@ -111,7 +163,10 @@ export function Footer() {
                 id="email"
                 placeholder="juandelacruz@gmail.com"
                 type="email"
+                value={formData.email}
+                onChange={handleChange}
                 className="mt-1 bg-neutral-800 border-neutral-700 text-neutral-100 focus:border-violet-500 focus:ring-violet-500"
+                required
               />
             </LabelInputContainer>
             <LabelInputContainer>
@@ -119,16 +174,50 @@ export function Footer() {
               <Textarea
                 placeholder="Your message here..."
                 id="message"
+                value={formData.message}
+                onChange={handleChange}
                 className="mt-1 bg-neutral-800 border-neutral-700 text-neutral-100 focus:border-violet-500 focus:ring-violet-500 h-40"
                 rows={5}
+                required
               />
             </LabelInputContainer>
             <button
-              className="w-full py-3.5 bg-violet-700 text-white rounded-md hover:bg-violet-600 transition-colors font-medium"
+              className="w-full py-3.5 bg-violet-700 text-white rounded-md hover:bg-violet-600 transition-colors font-medium disabled:bg-gray-600 flex items-center justify-center"
               type="submit"
+              disabled={isSubmitting}
             >
-              Send Message
+              {isSubmitting ? (
+                <>
+                  <svg
+                    className="animate-spin h-5 w-5 mr-3 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v8H4z"
+                    ></path>
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                "Send Message"
+              )}
             </button>
+            
+            {submitStatus === 'success' && (
+              <div className="p-3 text-sm text-green-500 bg-green-500/10 rounded-md">
+                Message sent successfully!
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="p-3 text-sm text-red-500 bg-red-500/10 rounded-md">
+                Failed to send message. Please try again later.
+              </div>
+            )}
           </form>
         </div>
 

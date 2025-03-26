@@ -47,7 +47,7 @@ export default function Works() {
 const items = [
     {
         title: "Crowd Monitoring Software",
-        description: "Real-time analytics for crowd movement and density.",
+        description: "Real-time analytics for crowd movement and density with Machine Learning.",
         className: "",
         icon: <IconClipboardCopy className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
@@ -65,12 +65,12 @@ const items = [
     },
     {
         title: "Web Application Firewall",
-        description: "Protect web applications against security threats.",
+        description: "A custom implementation of a web application firewall with machine learning.",
         className: "",
         icon: <IconTableColumn className="h-5 w-5 text-neutral-500" />,
         image: "/crowd_monitoring_software.png",
         repoLink: "https://github.com/yourusername/web-application-firewall",
-        tags: ["Cybersecurity", "Networking", "Security"],
+        tags: ["Cybersecurity", "Networking", "Security","Machine Learning", "Python", "Logistic Regression", "Random Forest"],
     },
     {
         title: "Domain Driven Design Inspired",

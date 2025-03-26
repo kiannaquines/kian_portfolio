@@ -72,7 +72,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className="flex flex-col md:flex-row justify-start pt-2 md:pt-20 md:gap-10 group"
+            className="flex flex-col md:flex-row justify-start pt-2 md:pt-0 md:gap-5 mb-10 group"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ 

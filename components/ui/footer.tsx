@@ -90,9 +90,6 @@ export function Footer() {
                 I'm Kian Naquines, a full-stack developer with expertise in modern web technologies and a passion for creating efficient, scalable solutions.
               </p>
               <p className="text-neutral-400">
-                My specialties include React, Node.js, Python, and machine learning. I enjoy solving complex problems and building intuitive user experiences.
-              </p>
-              <p className="text-neutral-400">
                 Currently open to new opportunities and collaborations on interesting projects.
               </p>
             </div>

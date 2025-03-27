@@ -24,19 +24,18 @@ const Hero = () => {
 
   return (
     <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-
-        <div className="flex flex-col items-center md:items-start text-center md:text-left w-full max-w-4xl z-10">
+      <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 items-start">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left w-full z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
             className="font-bold dark:text-white tracking-wide"
           >
-            <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-6xl lg:inline-block lg:ml-0">Software Engineer</span>
+            <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-7xl lg:inline-block lg:ml-0">Software Engineer</span>
             <br />
             <TypeAnimation
-              className="text-violet-500 text-[40px] sm:text-lg md:text-xl lg:text-6xl font-bold dark:text-violet-400 hidden lg:inline-block"
+              className="text-violet-500 text-[40px] sm:text-lg md:text-xl lg:text-7xl font-bold dark:text-violet-400 hidden lg:inline-block"
               sequence={["Frontend Dev", 2000, "UI Designer", 2000, "Backend Dev", 2000, "Frontend Dev", 2000, "Mobile Dev", 2000, "DevOps", 2000]}
               speed={30}
               repeat={Infinity}
@@ -48,7 +47,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
-            className="mt-6 text-lg p-2 text-neutral-800 dark:text-neutral-300"
+            className="mt-6 text-xl p-2 text-neutral-800 dark:text-neutral-300 max-w-[600px]"
           >
             I'm Kian, a software developer crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and Artificial Intelligence.
           </motion.p>
@@ -84,10 +83,10 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 100, damping: 10 }}
-          className="w-full flex justify-center md:justify-end"
+          className="w-full flex justify-end"
         >
           <div
-            className="relative w-full max-w-[220px] sm:max-w-[390px] aspect-square hidden sm:inline-block md:inline-block lg:inline-block"
+            className="relative w-full max-w-[220px] sm:max-w-[320px] aspect-square hidden sm:hidden md:inline-block lg:inline-block"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -105,7 +104,6 @@ const Hero = () => {
             />
           </div>
         </motion.div>
-
       </div>
     </div>
   );

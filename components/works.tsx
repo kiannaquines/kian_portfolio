@@ -12,9 +12,9 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Works() {
     return (
-        <div className="w-full p-2 sm:px-10 lg:px-28 pt-10 mb-10 lg:pt-20 mx-auto sm:p-2">
+        <div className="w-full p-2 sm:px-10 lg:px-28 pt-10 mb-10 lg:pt-20 lg:pb-16 mx-auto sm:p-2">
             <div className="mx-auto">
-                <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4 pt-9">
+                <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4">
                     My <TypeAnimation
                         className="text-violet-600"
                         sequence={["Projects", 2000, "Repositories", 2000, "Builds", 2000]}

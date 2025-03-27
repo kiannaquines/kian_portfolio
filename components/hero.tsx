@@ -26,7 +26,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
+    <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-28 mx-auto">
 
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -78,8 +78,8 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.4 }}
             className="mt-6 flex flex-wrap justify-center md:justify-start gap-3"
           >
-            <PrimaryButton title="Resume" className="min-w-[120px] text-base sm:text-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white transition-all duration-300" />
-            <PrimaryButton title="About Me" icon={<IconUserScan />} className="min-w-[120px] text-base sm:text-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white transition-all duration-300" />
+            <PrimaryButton title="Resume" className="min-w-[120px] text-base sm:text-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white transition-all duration-300 p-3" />
+            <PrimaryButton title="About Me" icon={<IconUserScan />} className="min-w-[120px] text-base sm:text-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white transition-all duration-300 p-3" />
             <SecondaryButton onClick={() => window.location.href = 'mailto:kjgnaquines@gmail.com'} title="Hire Me" className="min-w-[120px] text-base sm:text-sm bg-transparent border border-violet-500 text-violet-500 hover:bg-violet-600 hover:text-white transition-colors" />
           </motion.div>
 

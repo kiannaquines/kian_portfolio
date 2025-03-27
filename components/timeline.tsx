@@ -261,6 +261,18 @@ const TimeLine = () => {
                             <li>Simple E-commerce Prototype</li>
                         </ul>
                     </div>
+
+                    <div className="space-y-2">
+                        <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Technologies Used</h3>
+                        <div className="flex flex-wrap gap-2">
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">PHP</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">MySQL</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">JavaScript</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Bootstrap</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Jquery</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Ajax</span>
+                        </div>
+                    </div>
                 </div>
             ),
         },
@@ -286,13 +298,23 @@ const TimeLine = () => {
                             <li>First complete website deployment</li>
                         </ul>
                     </div>
+
+                    <div className="space-y-2">
+                        <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Technologies Used</h3>
+                        <div className="flex flex-wrap gap-2">
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">PHP</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">HTML</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">JavaScript</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">css</span>
+                        </div>
+                    </div>
                 </div>
             ),
         },
     ];
 
     return (
-        <section id="timeline-section" className="w-full px-4 sm:px-6 md:px-12 lg:px-20 py-10 sm:pt-20 md:pt-28 lg:pt-20 mx-auto">
+        <section id="timeline-section" className="w-full px-4 sm:px-6 md:px-12 lg:px-20 pt-10 sm:pt-20 md:pt-28 lg:pt-20 mx-auto">
             <Timeline data={data} />
         </section>
     );

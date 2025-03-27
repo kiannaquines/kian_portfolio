@@ -16,6 +16,7 @@ import SecondaryButton from "./ui/secondary-button";
 
 const Hero = () => {
   const [hovered, setHovered] = useState(false);
+  const [environment, setEnenvironment] = useState(process.env.ENV);
 
   const socialLinks = [
     { href: "https://github.com/kiannaquines", icon: <IconBrandGithub />, label: "GitHub" },
@@ -32,11 +33,15 @@ const Hero = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="flex justify-center md:justify-start mb-6"
       >
-        <div className="flex items-center bg-yellow-500/20 dark:bg-yellow-500/30 text-yellow-700 dark:text-yellow-300 px-4 py-2 rounded-full text-sm font-medium">
+        <div className={`flex items-center px-4 py-2 rounded-full text-sm font-medium ${environment === "development"
+            ? "bg-yellow-500/20 dark:bg-yellow-500/30 text-yellow-700 dark:text-yellow-300"
+            : "bg-green-500/20 dark:bg-green-500/30 text-green-700 dark:text-green-300"
+          }`}>
           <IconTools className="w-4 h-4 mr-2" />
-          <span>Under Development</span>
+          {environment === "development" ? <span>Under Development</span> : <span>Production</span>}
         </div>
       </motion.div>
+
 
       <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 items-start">
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full z-10">
@@ -46,7 +51,7 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
             className="font-bold dark:text-white tracking-wide"
           >
-            <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-7xl lg:inline-block lg:ml-0">Software Engineer</span>
+            <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-7xl lg:inline-flex lg:ml-0">Software Engineer</span>
             <br />
             <TypeAnimation
               className="text-violet-500 text-[40px] sm:text-lg md:text-xl lg:text-7xl font-bold dark:text-violet-400 hidden lg:inline-block"

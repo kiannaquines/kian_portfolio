@@ -3,12 +3,10 @@
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import {
-  SiNextdotjs, SiTailwindcss, SiTypescript, SiDocker, SiPostgresql, SiGraphql,
-  SiCplusplus, SiPhp, SiBootstrap, SiFlutter, SiDart, SiLaravel, SiMysql,
-  SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiComposer,
-  SiHeroku, SiJquery, SiFilezilla, SiNginx, SiSqlalchemy, SiSqlite, SiMongodb,
-  SiScikitlearn, SiTensorflow, SiPandas, SiLinux, SiNpm, SiUbuntu, SiGitforwindows,
-  SiDebian, SiCss3, SiNotion, SiGoogle, SiGooglecolab
+  SiNextdotjs, SiTailwindcss, SiTypescript, SiDocker, SiPostgresql,
+  SiPhp, SiBootstrap, SiFlutter, SiDart, SiLaravel, SiMysql,
+  SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiJquery, SiSqlalchemy, SiMongodb,
+  SiScikitlearn, SiTensorflow, SiPandas, SiCss3
 } from "react-icons/si";
 
 const technologies = [
@@ -18,14 +16,10 @@ const technologies = [
   { name: "TypeScript", icon: <SiTypescript className="w-10 h-10 text-blue-600" /> },
   { name: "Node.js", icon: <FaNodeJs className="w-10 h-10 text-green-600" /> },
   { name: "Python", icon: <FaPython className="w-10 h-10 text-yellow-500" /> },
-  { name: "Docker", icon: <SiDocker className="w-10 h-10 text-blue-500" /> },
   { name: "PostgreSQL", icon: <SiPostgresql className="w-10 h-10 text-blue-700" /> },
-  { name: "GraphQL", icon: <SiGraphql className="w-10 h-10 text-pink-600" /> },
-  { name: "C++", icon: <SiCplusplus className="w-10 h-10 text-blue-400" /> },
   { name: "PHP", icon: <SiPhp className="w-10 h-10 text-purple-600" /> },
   { name: "Bootstrap", icon: <SiBootstrap className="w-10 h-10 text-violet-700" /> },
   { name: "Flutter", icon: <SiFlutter className="w-10 h-10 text-blue-600" /> },
-  { name: "Dart", icon: <SiDart className="w-10 h-10 text-red-600" /> },
   { name: "Laravel", icon: <SiLaravel className="w-10 h-10 text-red-600" /> },
   { name: "MySQL", icon: <SiMysql className="w-10 h-10 text-blue-700" /> },
   { name: "JavaScript", icon: <SiJavascript className="w-10 h-10 text-yellow-500" /> },
@@ -33,27 +27,13 @@ const technologies = [
   { name: "Django", icon: <SiDjango className="w-10 h-10 text-green-600" /> },
   { name: "Flask", icon: <SiFlask className="w-10 h-10 text-blue-700" /> },
   { name: "FastAPI", icon: <SiFastapi className="w-10 h-10 text-green-600" /> },
-  { name: "GitHub", icon: <SiGithub className="w-10 h-10 text-black dark:text-white" /> },
-  { name: "Composer", icon: <SiComposer className="w-10 h-10 text-blue-700" /> },
-  { name: "Heroku", icon: <SiHeroku className="w-10 h-10 text-violet-700" /> },
   { name: "jQuery", icon: <SiJquery className="w-10 h-10 text-blue-600" /> },
-  { name: "Filezilla", icon: <SiFilezilla className="w-10 h-10 text-red-700" /> },
-  { name: "Nginx", icon: <SiNginx className="w-10 h-10 text-green-700" /> },
   { name: "SQLAlchemy", icon: <SiSqlalchemy className="w-10 h-10 text-blue-700" /> },
-  { name: "SQLite", icon: <SiSqlite className="w-10 h-10 text-blue-700" /> },
   { name: "MongoDB", icon: <SiMongodb className="w-10 h-10 text-green-700" /> },
   { name: "scikit-learn", icon: <SiScikitlearn className="w-10 h-10 text-blue-500" /> },
   { name: "TensorFlow", icon: <SiTensorflow className="w-10 h-10 text-orange-500" /> },
   { name: "Pandas", icon: <SiPandas className="w-10 h-10 text-blue-700" /> },
-  { name: "Linux", icon: <SiLinux className="w-10 h-10 text-white" /> },
-  { name: "NPM", icon: <SiNpm className="w-10 h-10 text-red-700" /> },
-  { name: "Ubuntu", icon: <SiUbuntu className="w-10 h-10 text-orange-700" /> },
-  { name: "Git", icon: <SiGitforwindows className="w-10 h-10 text-orange-700" /> },
-  { name: "Debian", icon: <SiDebian className="w-10 h-10 text-red-700" /> },
   { name: "CSS3", icon: <SiCss3 className="w-10 h-10 text-blue-400" /> },
-  { name: "Notion", icon: <SiNotion className="w-10 h-10" /> },
-  { name: "Google", icon: <SiGoogle className="w-10 h-10" /> },
-  { name: "Colab", icon: <SiGooglecolab className="w-10 h-10 text-orange-400" /> },
 ];
 
 const TechStack = () => {

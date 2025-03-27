@@ -33,7 +33,7 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
             className="font-bold dark:text-white tracking-wide"
           >
-            <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-6xl lg:inline-block lg:ml-0">Software <span className="text-violet-400">Engineer</span> </span>
+            <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-6xl lg:inline-block lg:ml-0">Software Engineer</span>
             <br />
             <TypeAnimation
               className="text-violet-500 text-[40px] sm:text-lg md:text-xl lg:text-6xl font-bold dark:text-violet-400 hidden lg:inline-block"

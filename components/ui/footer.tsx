@@ -24,13 +24,13 @@ export function Footer() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    if (!formData.firstName.trim() || !formData.lastName.trim() || 
-        !formData.email.trim() || !formData.message.trim()) {
+
+    if (!formData.firstName.trim() || !formData.lastName.trim() ||
+      !formData.email.trim() || !formData.message.trim()) {
       setSubmitStatus('error');
       return;
     }
-    
+
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       setSubmitStatus('error');
       return;
@@ -99,7 +99,7 @@ export function Footer() {
               <div className="space-y-3">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-center space-x-3 text-neutral-400 hover:text-neutral-300 transition-colors">
-                    <span className="text-violet-400">{item.icon}</span>
+                    <span className="text-violet-600">{item.icon}</span>
                     <span>{item.text}</span>
                   </div>
                 ))}
@@ -116,11 +116,9 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={item.label}
-                    className="p-3 bg-neutral-800 rounded-full hover:bg-violet-700 transition-colors"
+                    className="p-3 bg-neutral-800 rounded-full hover:bg-violet-700 transition-all duration-300 group"
                   >
-                    {React.cloneElement(item.icon, {
-                      className: "text-neutral-300 hover:text-white w-5 h-5",
-                    })}
+                    {React.cloneElement(item.icon, { className: "text-neutral-300 group-hover:text-white w-6 h-6" })}
                   </a>
                 ))}
               </div>
@@ -179,7 +177,7 @@ export function Footer() {
               />
             </LabelInputContainer>
             <button
-              className="w-full py-3.5 bg-violet-700 text-white rounded-md hover:bg-violet-600 transition-colors font-medium disabled:bg-gray-600 flex items-center justify-center"
+              className="w-full py-2 hover:cursor-pointer bg-violet-700 text-white rounded-md hover:bg-violet-600 transition-colors font-medium disabled:bg-gray-600 flex items-center justify-center"
               type="submit"
               disabled={isSubmitting}
             >
@@ -204,7 +202,7 @@ export function Footer() {
                 "Send Message"
               )}
             </button>
-            
+
             {submitStatus === 'success' && (
               <div className="p-3 text-sm text-green-500 bg-green-500/10 rounded-md">
                 Message sent successfully!

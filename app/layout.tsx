@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Tektur } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const tektur = Tektur({
   weight: "400",
@@ -32,6 +33,7 @@ export default function RootLayout({
         disableTransitionOnChange
       >
         {children}
+        <SpeedInsights />
       </ThemeProvider>
     </body>
   </html>

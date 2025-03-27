@@ -9,6 +9,7 @@ import {
   IconBrandLinkedin,
   IconBrandTwitter,
   IconUserScan,
+  IconTools,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import SecondaryButton from "./ui/secondary-button";
@@ -24,6 +25,19 @@ const Hero = () => {
 
   return (
     <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-32 mx-auto">
+
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="flex justify-center md:justify-start mb-6"
+      >
+        <div className="flex items-center bg-yellow-500/20 dark:bg-yellow-500/30 text-yellow-700 dark:text-yellow-300 px-4 py-2 rounded-full text-sm font-medium">
+          <IconTools className="w-4 h-4 mr-2" />
+          <span>Under Development</span>
+        </div>
+      </motion.div>
+
       <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 items-start">
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full z-10">
           <motion.h2

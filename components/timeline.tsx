@@ -172,7 +172,7 @@ const TimeLine = () => {
                     </div>
 
                     <div className="space-y-2">
-                        <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Projects</h3>
+                        <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Other Projects</h3>
                         <ul className="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300 text-sm sm:text-base">
                             <li>Barangay Management Software</li>
                             <li>Video Conferencing Software</li>
@@ -190,7 +190,7 @@ const TimeLine = () => {
         },
         {
             title: "2021",
-            subtitle: "Algorithms & Data Structures Mastery",
+            subtitle: "Introduced Algorithms & Data Structures in DSA Course",
             content: (
                 <div className="space-y-4">
                     <div className="space-y-2">
@@ -215,7 +215,7 @@ const TimeLine = () => {
         },
         {
             title: "2020",
-            subtitle: "First Professional Project",
+            subtitle: "First Professional Project & Web Development",
             content: (
                 <div className="space-y-4">
                     <div className="space-y-2">
@@ -241,7 +241,7 @@ const TimeLine = () => {
         },
         {
             title: "2019",
-            subtitle: "Backend Development Foundations",
+            subtitle: "Implemented First Database-Connected Application",
             content: (
                 <div className="space-y-4">
                     <div className="space-y-2">
@@ -277,8 +277,8 @@ const TimeLine = () => {
             ),
         },
         {
-            title: "2018",
-            subtitle: "Programming Journey Begins",
+            title: "2018 (First Year)",
+            subtitle: "Programming Journey Begins Where All Struggles Started",
             content: (
                 <div className="space-y-4">
                     <div className="space-y-2">

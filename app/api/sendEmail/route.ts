@@ -11,7 +11,6 @@ interface EmailRequestBody {
 export async function POST(request: Request) {
 
     if (!process.env.EMAIL_USERNAME || !process.env.EMAIL_PASSWORD) {
-    console.error("Email credentials not configured");
     return NextResponse.json(
       { success: false, message: "Server configuration error" },
       { status: 500 }
@@ -59,10 +58,10 @@ export async function POST(request: Request) {
 
   try {
     const mailOptions = {
-      from: `"Portfolio Contact" <${process.env.EMAIL_USERNAME}>`,
+      from: `"Portfolio Contact" <${email}>`,
       to: "kjgnaquines@gmail.com",
       replyTo: email,
-      subject: `New message from ${sanitize(firstName)} ${sanitize(lastName)}`,
+      subject: `New employment message from ${sanitize(firstName)} ${sanitize(lastName)}`,
       text: `
         Name: ${sanitize(firstName)} ${sanitize(lastName)}
         Email: ${sanitize(email)}
@@ -86,14 +85,12 @@ export async function POST(request: Request) {
 
     await transporter.verify();
     const info = await transporter.sendMail(mailOptions);
-    console.log("Message sent: %s", info.messageId);
     
     return NextResponse.json(
       { success: true, message: "Email sent successfully!" },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error sending email:", error);
     
     let errorMessage = "Failed to send email";
     if (error instanceof Error) {

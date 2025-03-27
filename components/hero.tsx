@@ -15,8 +15,9 @@ import Image from "next/image";
 import SecondaryButton from "./ui/secondary-button";
 
 const Hero = () => {
+
   const [hovered, setHovered] = useState(false);
-  const [environment, setEnenvironment] = useState(process.env.ENV);
+  const [environment] = useState('development');
 
   const socialLinks = [
     { href: "https://github.com/kiannaquines", icon: <IconBrandGithub />, label: "GitHub" },

@@ -11,12 +11,22 @@ const tektur = Tektur({
 });
 
 export const metadata: Metadata = {
-  title: "Kian Jearard Naquines",
-  description: "Kian Naquines Portfolio",
+  metadataBase: new URL('https://example.com'),
+  title: { default: 'Kian Jearard Naquines', template: '%s | My Site' },
+  description: 'Welcome to My Site',
   icons: {
     icon: "/anime_me.png",
   },
-};
+  alternates: {
+    canonical: 'https://example.com',
+  },
+  openGraph: {
+    title: 'Kian Jearard Naquines Portfolio',
+    description: 'Welcome to Kian Jearard Naquines Portfolio',
+    url: 'https://example.com',
+    siteName: 'Kian Jearard Naquines Portfolio',
+  },
+}
 
 export default function RootLayout({
   children,

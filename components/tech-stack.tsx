@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import {
-  SiNextdotjs, SiTailwindcss, SiTypescript, SiDocker, SiPostgresql,
-  SiPhp, SiBootstrap, SiFlutter, SiDart, SiLaravel, SiMysql,
-  SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiGithub, SiJquery, SiSqlalchemy, SiMongodb,
+  SiNextdotjs, SiTailwindcss, SiTypescript, SiPostgresql,
+  SiPhp, SiBootstrap, SiFlutter, SiLaravel, SiMysql,
+  SiJavascript, SiGo, SiDjango, SiFlask, SiFastapi, SiJquery, SiSqlalchemy, SiMongodb,
   SiScikitlearn, SiTensorflow, SiPandas, SiCss3
 } from "react-icons/si";
 
@@ -38,7 +38,7 @@ const technologies = [
 
 const TechStack = () => {
   return (
-    <div className="w-full p-2 sm:px-10 lg:px-28 pt-0 lg:pt-0 mx-auto sm:p-2">
+    <div className="w-full p-2 sm:px-10 lg:px-28 pt-0 lg:pt-20 mx-auto sm:p-2">
       <div className="mx-auto text-center max-w-7xl">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ const TechStack = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-6"
         >
-          My <span className="text-violet-500 bg-gradient-to-r from-violet-500 to-purple-600 bg-clip-text text-transparent">Technologies</span>
+          My <span className="text-violet-600 bg-clip-text text-transparent">Technologies</span>
         </motion.h1>
 
         <motion.p

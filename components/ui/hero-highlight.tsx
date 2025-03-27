@@ -25,22 +25,23 @@ export const HeroHighlight = ({
     const { left, top } = currentTarget.getBoundingClientRect();
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
-    
-    animate(radius, 200, { duration: 0.4 });
-    animate(glowIntensity, 0.3, { duration: 0.2 });
+
+    animate(radius, 250, { duration: 0.3, ease: "easeOut" });
+    animate(glowIntensity, 0.5, { duration: 0.2, ease: "easeOut" });
   };
 
   const handleMouseLeave = () => {
-    animate(radius, 0, { duration: 0.5 });
-    animate(glowIntensity, 0, { duration: 0.3 });
+    animate(radius, 0, { duration: 0.4, ease: "easeIn" });
+    animate(glowIntensity, 0, { duration: 0.3, ease: "easeIn" });
   };
 
   useEffect(() => {
     const pulse = () => {
-      animate(glowIntensity, 0.1, {
-        duration: 2,
+      animate(glowIntensity, 0.2, {
+        duration: 2.5,
         repeat: Infinity,
         repeatType: "reverse",
+        ease: "easeInOut",
       });
     };
     pulse();
@@ -55,24 +56,17 @@ export const HeroHighlight = ({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
+
       <div className="absolute inset-0 h-full bg-dot-thick-neutral-600/30 dark:bg-dot-thick-neutral-200/30 pointer-events-none" />
 
       <motion.div
         className="pointer-events-none absolute inset-0 h-full"
         style={{
           WebkitMaskImage: useMotionTemplate`
-            radial-gradient(
-              ${radius}px circle at ${mouseX}px ${mouseY}px,
-              black 0%,
-              transparent 80%
-            )
+            radial-gradient(${radius}px circle at ${mouseX}px ${mouseY}px, black 0%, transparent 80%)
           `,
           maskImage: useMotionTemplate`
-            radial-gradient(
-              ${radius}px circle at ${mouseX}px ${mouseY}px,
-              black 0%,
-              transparent 80%
-            )
+            radial-gradient(${radius}px circle at ${mouseX}px ${mouseY}px, black 0%, transparent 80%)
           `,
           opacity: glowIntensity,
         }}
@@ -81,24 +75,21 @@ export const HeroHighlight = ({
         <motion.div 
           className="absolute inset-0 h-full bg-violet-500/10 dark:bg-violet-400/10"
           style={{
-            boxShadow: useMotionTemplate`0 0 100px 30px rgba(139, 92, 246, ${glowIntensity})`,
+            boxShadow: useMotionTemplate`0 0 150px 40px rgba(139, 92, 246, ${glowIntensity})`,
           }}
         />
       </motion.div>
 
       <motion.div 
-        className="pointer-events-none absolute inset-0 h-full opacity-0 group-hover:opacity-30 transition-opacity duration-300"
+        className="pointer-events-none absolute inset-0 h-full opacity-0 group-hover:opacity-40 transition-opacity duration-300"
         style={{
           background: useMotionTemplate`
-            radial-gradient(
-              600px circle at ${mouseX}px ${mouseY}px,
-              rgba(139, 92, 246, 0.15),
-              transparent 80%
-            )
+            radial-gradient(800px circle at ${mouseX}px ${mouseY}px, rgba(139, 92, 246, 0.2), transparent 80%)
           `,
         }}
       />
 
+      {/* Content */}
       <div className={cn("relative z-10 h-full w-full", className)}>
         {children}
       </div>

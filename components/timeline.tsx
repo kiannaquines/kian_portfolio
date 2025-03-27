@@ -24,15 +24,15 @@ const TimeLine = () => {
                         <div className="space-y-2">
                             <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Technologies Used</h3>
                             <div className="flex flex-wrap gap-2">
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Docker</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Python</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Go</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Domain Driven Design</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Laravel</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">NextJS</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">React</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Shadcn/UI</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">AceternityUI</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Docker</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Python</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Go</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Domain Driven Design</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Laravel</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">NextJS</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">React</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Shadcn/UI</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">AceternityUI</span>
                             </div>
                         </div>
 
@@ -48,12 +48,12 @@ const TimeLine = () => {
                         <div className="space-y-2">
                             <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Technologies Used</h3>
                             <div className="flex flex-wrap gap-2">
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Python</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Scikit-learn</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Pandas</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Matplotlib</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Plotly</span>
-                                <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Scipy</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Python</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Scikit-learn</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Pandas</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Matplotlib</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Plotly</span>
+                                <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Scipy</span>
                             </div>
                         </div>
                     </div>
@@ -92,15 +92,15 @@ const TimeLine = () => {
                     <div className="space-y-2">
                         <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Technologies Used</h3>
                         <div className="flex flex-wrap gap-2">
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">MQTT</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Event-Driven Architecture</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Docker</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Machine Learning</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">React</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">NextJS</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Python</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">FastAPI</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Go</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">MQTT</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Event-Driven Architecture</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Docker</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Machine Learning</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">React</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">NextJS</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Python</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">FastAPI</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Go</span>
                         </div>
                     </div>
 
@@ -144,15 +144,15 @@ const TimeLine = () => {
                     <div className="space-y-2">
                         <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Skills Developed</h3>
                         <div className="flex flex-wrap gap-2">
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Business Logic</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Logical Thinking</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Problem Solving</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Data Analysis</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Algorithms</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Python</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Django</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">API</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Object Oriented Programming</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Business Logic</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Logical Thinking</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Problem Solving</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Data Analysis</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Algorithms</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Python</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Django</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">API</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Object Oriented Programming</span>
                         </div>
                     </div>
                 </div>
@@ -205,9 +205,9 @@ const TimeLine = () => {
                     <div className="space-y-2">
                         <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Focus Areas</h3>
                         <div className="flex flex-wrap gap-2">
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Data Structure</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Algorithms</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Recursion</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Data Structure</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Algorithms</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Recursion</span>
                         </div>
                     </div>
                 </div>
@@ -230,10 +230,10 @@ const TimeLine = () => {
                     <div className="space-y-2">
                         <h3 className="font-medium text-neutral-800 dark:text-neutral-100">Technologies Used</h3>
                         <div className="flex flex-wrap gap-2">
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">PHP</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">MySQL</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">JavaScript</span>
-                            <span className="px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md text-xs sm:text-sm">Bootstrap</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">PHP</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">MySQL</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">JavaScript</span>
+                            <span className="px-2 py-1 bg-neutral-100 dark:bg-violet-800 rounded-md text-xs sm:text-sm">Bootstrap</span>
                         </div>
                     </div>
                 </div>

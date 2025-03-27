@@ -76,7 +76,7 @@ export function Footer() {
     <footer id="contact" className="w-full bg-neutral-900 text-neutral-100">
       <div className="w-full max-w-8xl mx-auto px-10 sm:px-6 lg:pl-28 lg:pr-28 lg:pt-10 pt-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-center text-white font-bold mb-4">
-          Want to <span className="text-violet-400">connect?</span>
+          Want to <span className="text-violet-600">connect?</span>
         </h1>
         <p className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-10 max-w-2xl mx-auto p-2 sm:p-0 md:p-0 lg:p-0">
           Fill out the form below or reach out directly through my contact information.

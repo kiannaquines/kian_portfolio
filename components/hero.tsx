@@ -35,8 +35,8 @@ const Hero = () => {
         className="flex justify-center md:justify-start mb-6"
       >
         <div className={`flex items-center px-4 py-2 rounded-full text-sm font-medium ${environment === "development"
-            ? "bg-yellow-500/20 dark:bg-yellow-500/30 text-yellow-700 dark:text-yellow-300"
-            : "bg-green-500/20 dark:bg-green-500/30 text-green-700 dark:text-green-300"
+          ? "bg-yellow-500/20 dark:bg-yellow-500/30 text-yellow-700 dark:text-yellow-300"
+          : "bg-green-500/20 dark:bg-green-500/30 text-green-700 dark:text-green-300"
           }`}>
           <IconTools className="w-4 h-4 mr-2" />
           {environment === "development" ? <span>Under Development</span> : <span>Production</span>}
@@ -55,8 +55,8 @@ const Hero = () => {
             <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-7xl lg:inline-flex lg:ml-0">Software Engineer</span>
             <br />
             <TypeAnimation
-              className="text-violet-500 text-[40px] sm:text-lg md:text-xl lg:text-7xl font-bold dark:text-violet-400 hidden lg:inline-block"
-              sequence={["Frontend Dev", 2000, "UI Designer", 2000, "Backend Dev", 2000, "Frontend Dev", 2000, "Mobile Dev", 2000, "DevOps", 2000]}
+              className="text-violet-600 text-[40px] sm:text-lg md:text-xl lg:text-7xl font-bold dark:text-violet-600 hidden lg:inline-block"
+              sequence={["Frontend Dev", 3000, "UI Designer", 3000, "Backend Dev", 3000, "Frontend Dev", 3000, "Mobile Dev", 3000, "DevOps", 3000]}
               speed={30}
               repeat={Infinity}
               wrapper="span"
@@ -69,7 +69,7 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
             className="mt-6 text-xl p-2 text-neutral-800 dark:text-neutral-300 max-w-[600px]"
           >
-            I'm Kian, a software developer crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and Artificial Intelligence.
+            I'm Kian, an <b className="text-violet-500">AI first software developer</b> crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and Artificial Intelligence.
           </motion.p>
 
           <motion.div
@@ -78,9 +78,9 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.4 }}
             className="mt-6 flex flex-wrap justify-center md:justify-start gap-3"
           >
-            <PrimaryButton title="Resume" className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors p-3 lg:p-0" />
-            <PrimaryButton title="About Me" icon={<IconUserScan />} className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
-            <SecondaryButton onClick={() => window.location.href = 'mailto:kjgnaquines@gmail.com'} title="Hire Me" className="min-w-[120px] text-base sm:text-sm hover:bg-violet-600 hover:text-white transition-colors" />
+            <PrimaryButton title="Resume" className="min-w-[120px] text-base sm:text-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white transition-all duration-300" />
+            <PrimaryButton title="About Me" icon={<IconUserScan />} className="min-w-[120px] text-base sm:text-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white transition-all duration-300" />
+            <SecondaryButton onClick={() => window.location.href = 'mailto:kjgnaquines@gmail.com'} title="Hire Me" className="min-w-[120px] text-base sm:text-sm bg-transparent border border-violet-500 text-violet-500 hover:bg-violet-600 hover:text-white transition-colors" />
           </motion.div>
 
           <div className="flex space-x-4 mt-8">
@@ -91,18 +91,18 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                className="p-2 bg-neutral-800 rounded-full hover:bg-violet-700 transition-colors"
+                className="p-3 bg-neutral-800 rounded-full hover:bg-violet-700 transition-all duration-300 group"
               >
-                {React.cloneElement(item.icon, { className: "text-neutral-300 hover:text-white" })}
+                {React.cloneElement(item.icon, { className: "text-neutral-300 group-hover:text-white w-6 h-6" })}
               </a>
             ))}
           </div>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="w-full flex justify-end"
         >
           <div
@@ -110,20 +110,28 @@ const Hero = () => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
+            {/* Rotating Circular Effect */}
+            <motion.div
+              className="absolute inset-0 w-full h-full border-[3px] border-violet-500 rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
+            />
+
+            {/* Image */}
             <Image
               src="/anime_me.png"
               alt="Kian's anime-style portrait"
               className="rounded-2xl object-cover w-full h-full border-4 border-violet-500 
-                        shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
-                        transition-all duration-300 ease-in-out 
-                        hover:rotate-4 hover:scale-105 
-                        sm:mb-2"
+                shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
+                transition-all duration-300 ease-in-out 
+                hover:scale-105 hover:rotate-1"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px"
               priority
             />
           </div>
         </motion.div>
+
       </div>
     </div>
   );

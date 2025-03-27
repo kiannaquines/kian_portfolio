@@ -25,7 +25,7 @@ export const BentoGridItem = ({
   description,
   header,
   icon,
-  image,
+  videoUrl,
   repoLink,
   tags = [],
 }: {
@@ -34,7 +34,7 @@ export const BentoGridItem = ({
   description?: string | React.ReactNode;
   header?: React.ReactNode;
   icon?: React.ReactNode;
-  image?: string;
+  videoUrl?: string;
   repoLink?: string;
   tags?: string[];
 }) => {
@@ -46,13 +46,15 @@ export const BentoGridItem = ({
         className
       )}
     >
-      {image && (
-        <div className="w-full h-40 overflow-hidden rounded-lg">
-          <img
-            src={image}
-            alt={typeof title === "string" ? title : "Project Image"}
-            className="w-full h-full object-cover"
-          />
+      {videoUrl && (
+        <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+          <iframe
+            src={`https://www.youtube.com/embed/${extractYouTubeID(videoUrl)}`}
+            title={typeof title === "string" ? title : "YouTube Video"}
+            className="absolute top-0 left-0 w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       )}
 
@@ -63,7 +65,7 @@ export const BentoGridItem = ({
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-gray-700 text-white text-[10px] font-semibold px-2 py-1 rounded-full"
+              className="bg-zinc-800 text-white text-[10px] font-semibold px-2 py-1 rounded-full"
             >
               {tag}
             </span>
@@ -95,4 +97,10 @@ export const BentoGridItem = ({
       )}
     </div>
   );
+};
+
+const extractYouTubeID = (url: string) => {
+  const regExp = /(?:youtu\.be\/|youtube\.com\/(?:.*v=|.*\/)([\w-]+))/;
+  const match = url.match(regExp);
+  return match ? match[1] : "";
 };

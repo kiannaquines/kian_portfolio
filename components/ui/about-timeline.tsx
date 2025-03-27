@@ -51,7 +51,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
             My journey as a
             <br />
             <TypeAnimation
-              className="text-violet-600 dark:text-violet-400"
+              className="text-violet-600"
               sequence={[
                 "developer", 2000, 
                 "innovator", 2000,
@@ -90,7 +90,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
                 />
               </div>
               <div className="pl-5 md:pl-20 ml-10">
-                <h3 className="hidden md:block text-xl md:text-2xl font-bold text-violet-600 dark:text-violet-400">
+                <h3 className="hidden md:block text-xl md:text-2xl font-bold text-violet-600">
                   {item.title}
                 </h3>
                 {item.subtitle && (
@@ -134,7 +134,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-b from-violet-500 to-violet-600 dark:from-violet-400 dark:to-violet-500"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-b from-violet-500 to-violet-800 dark:from-violet-400 dark:to-violet-800"
           />
         </div>
       </div>

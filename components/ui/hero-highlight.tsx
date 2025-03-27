@@ -49,7 +49,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "relative w-full min-h-screen",
+        "relative w-full min-h-screen overflow-x-hidden",
         containerClassName
       )}
       onMouseMove={handleMouseMove}
@@ -99,7 +99,7 @@ export const HeroHighlight = ({
         }}
       />
 
-      <div className={cn("relative z-10 h-full", className)}>
+      <div className={cn("relative z-10 h-full w-full", className)}>
         {children}
       </div>
     </div>

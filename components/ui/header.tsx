@@ -32,7 +32,7 @@ const Header = () => {
    bg-white/30 dark:bg-black/30 shadow-md`
 }
     >
-      <div className="flex items-center">
+      <div className="hidden lg:flex items-center">
         <span className="text-lg font-bold text-gray-900 dark:text-white">
          <Link href="/"> &lt;Kian Naquines/&gt;</Link>
         </span>

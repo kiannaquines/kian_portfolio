@@ -35,17 +35,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-    <body className={`${tektur.variable} antialiased bg-background text-foreground font-[family-name:var(--font-tektur)]`}>
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        enableSystem
-        disableTransitionOnChange
-      >
-        {children}
-        <SpeedInsights />
-      </ThemeProvider>
-    </body>
-  </html>
+      <body className={`${tektur.variable} antialiased bg-background text-foreground font-[family-name:var(--font-tektur)]`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <SpeedInsights />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

@@ -84,7 +84,7 @@ export function Footer() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold">About Me</h2>
+            <h2 className="text-xl font-bold">About Me</h2>
             <div className="space-y-4">
               <p className="text-neutral-400">
                 I'm Kian Naquines, a full-stack developer with expertise in modern web technologies and a passion for creating efficient, scalable solutions.

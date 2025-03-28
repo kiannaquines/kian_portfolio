@@ -16,7 +16,7 @@ export default function Works() {
             <div className="mx-auto">
                 <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4">
                     My <TypeAnimation
-                        className="text-violet-600"
+                        className="text-violet-500"
                         sequence={["Projects", 2000, "Repositories", 2000, "Builds", 2000]}
                         speed={30}
                         repeat={Infinity}

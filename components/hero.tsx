@@ -55,7 +55,7 @@ const Hero = () => {
             <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-7xl lg:inline-flex lg:ml-0">Software Engineer</span>
             <br />
             <TypeAnimation
-              className="text-violet-600 text-[40px] sm:text-lg md:text-xl lg:text-7xl font-bold dark:text-violet-600 hidden lg:inline-block"
+              className="text-violet-500 text-[40px] sm:text-lg md:text-xl lg:text-7xl font-bold dark:text-violet-500 hidden lg:inline-block"
               sequence={["Frontend Dev", 3000, "UI Designer", 3000, "Backend Dev", 3000, "Frontend Dev", 3000, "Mobile Dev", 3000, "DevOps", 3000]}
               speed={30}
               repeat={Infinity}
@@ -67,7 +67,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
-            className="mt-6 text-xl p-2 text-neutral-800 dark:text-neutral-300 max-w-[600px]"
+            className="mt-6 text-xl text-neutral-800 dark:text-neutral-300 max-w-[600px]"
           >
             I'm Kian, an <b className="text-violet-500">AI first software developer</b> crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and Artificial Intelligence.
           </motion.p>
@@ -78,8 +78,8 @@ const Hero = () => {
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.4 }}
             className="mt-6 flex flex-wrap justify-center md:justify-start gap-3"
           >
-            <PrimaryButton title="Resume" className="min-w-[120px] text-base sm:text-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white transition-all duration-300 p-3 custom-hover" />
-            <PrimaryButton title="About Me" icon={<IconUserScan />} className="min-w-[120px] text-base sm:text-sm bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white transition-all duration-300 p-3 custom-hover" />
+            <PrimaryButton title="Resume" className="font-semibold min-w-[120px] text-xl sm:text-sm bg-neutral-800 text-white transition-all duration-300 p-3" />
+            <PrimaryButton title="About Me" icon={<IconUserScan />} className="min-w-[120px] text-base sm:text-sm bg-neutral-800 text-white transition-all duration-300 p-3" />
             <SecondaryButton onClick={() => window.location.href = 'mailto:kjgnaquines@gmail.com'} title="Hire Me" className="min-w-[120px] text-base sm:text-sm bg-transparent border border-violet-500 text-violet-500 hover:bg-violet-600 hover:text-white transition-colors custom-hover" />
           </motion.div>
 

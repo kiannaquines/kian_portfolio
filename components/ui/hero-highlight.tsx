@@ -88,7 +88,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "relative w-full min-h-screen overflow-x-hidden",
+        "relative w-full min-screen overflow-x-hidden",
         containerClassName
       )}
       onMouseMove={handleMouseMove}

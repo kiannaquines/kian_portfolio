@@ -30,7 +30,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
     >
 
       <motion.div 
-        className="absolute inset-0 bg-gradient-to-r from-violet-600 to-fuchsia-500 rounded-lg"
+        className="absolute inset-0 bg-gradient-to-r from-violet-600 to-violet-400 rounded-lg"
         animate={{
           backgroundPosition: isHovered ? '100% 50%' : '0% 50%',
           opacity: isHovered ? 1 : 0.8,
@@ -42,7 +42,7 @@ const SecondaryButton: React.FC<SecondaryButtonProps> = ({
       <div className={`
         relative px-6 py-3 bg-neutral-900/90 rounded-lg
         text-white flex items-center justify-center gap-3
-        text-base font-medium tracking-wide
+        font-semibold tracking-wide
         transition-all duration-300
       `}>
         {icon && (

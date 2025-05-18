@@ -7,7 +7,7 @@ export const InfiniteMovingCards = ({
     items,
     direction = "left",
     speed = "fast",
-    pauseOnHover = true,
+    pauseOnHover = false,
     className,
 }: {
     items: {
@@ -131,47 +131,47 @@ export function InfiniteMovingCardsFeedback() {
 const feedbackList = [
     {
         feedback: "Your work is amazing! The interface is clean, intuitive, and very easy to use. Great job!",
-        name: "Jennifer P. Escote",
+        name: "Jennifer",
         title: "Financial Management Project",
     },
     {
         feedback: "You did an excellent job optimizing the system! It's fast and runs smoothly, even on mobile.",
-        name: "Irish Mae V. Bianson",
+        name: "Irish",
         title: "Sta. Catalina Automated Booking Software",
     },
     {
         feedback: "I really appreciate the attention to detail in your design! The UI is modern and visually appealing.",
-        name: "Shiela Mae Bernabe",
+        name: "Shiela",
         title: "Radio Station Log Management Software",
     },
     {
         feedback: "Your development skills are impressive! Everything is well-structured and easy to navigate.",
-        name: "Kevin Aldabon",
+        name: "Kevin",
         title: "Tourism Management Software",
     },
     {
         feedback: "Great work on making file uploads seamless! The process is smooth and hassle-free.",
-        name: "Catherine Maglinte",
+        name: "Catherine",
         title: "Financial Management Software",
     },
     {
         feedback: "The features you implemented are incredibly useful! They make management tasks so much easier.",
-        name: "Nikie Otanes",
+        name: "Nikie",
         title: "Irrigation Management Software",
     },
     {
         feedback: "Your coding skills are top-notch! The system is user-friendly and very reliable.",
-        name: "Lyndawn Ayagan",
+        name: "Lyndawn",
         title: "Dormitory Management Software",
     },
     {
         feedback: "Fantastic job on the system’s performance! Everything runs efficiently without any issues.",
-        name: "Cristine Irlandez",
+        name: "Cristine",
         title: "Lition's Agri Buy & Sale Software",
     },
     {
         feedback: "You built an amazing system! It has greatly improved our workflow and productivity.",
-        name: "Karen Abayon",
+        name: "Karen",
         title: "Seaoil Management Software",
     },
 ];

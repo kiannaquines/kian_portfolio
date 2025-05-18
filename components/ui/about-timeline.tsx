@@ -51,7 +51,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
             My journey as a
             <br />
             <TypeAnimation
-              className="text-violet-500"
+              className="text-violet-400"
               sequence={[
                 "developer", 2000, 
                 "innovator", 2000,
@@ -85,16 +85,16 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-20 sm:top-40 self-start max-w-xs md:max-w-sm w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full flex items-center justify-center bg-transparent">
                 <motion.div 
-                  className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border-2 border-violet-500 dark:border-violet-400 group-hover:bg-violet-500 dark:group-hover:bg-violet-400 transition-colors duration-300"
+                  className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border-2 border-violet-400 dark:border-violet-400 group-hover:bg-violet-400 dark:group-hover:bg-violet-400 transition-colors duration-300"
                   whileHover={{ scale: 1.2 }}
                 />
               </div>
               <div className="pl-5 md:pl-20 ml-10">
-                <h3 className="hidden md:block text-xl md:text-2xl font-bold text-violet-500">
+                <h3 className="hidden md:block text-xl md:text-2xl font-bold text-violet-400">
                   {item.title}
                 </h3>
                 {item.subtitle && (
-                  <p className="hidden md:block text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+                  <p className="hidden md:block text-sm text-neutral-400 dark:text-neutral-400 mt-1">
                     {item.subtitle}
                   </p>
                 )}
@@ -107,7 +107,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
                   {item.title}
                 </h3>
                 {item.subtitle && (
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+                  <p className="text-sm text-neutral-400 dark:text-neutral-400 mt-1">
                     {item.subtitle}
                   </p>
                 )}
@@ -134,7 +134,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-b from-violet-500 to-violet-800 dark:from-violet-400 dark:to-violet-800"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-b from-violet-400 to-violet-800 dark:from-violet-400 dark:to-violet-800"
           />
         </div>
       </div>

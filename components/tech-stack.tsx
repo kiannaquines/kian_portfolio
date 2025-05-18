@@ -46,7 +46,7 @@ const TechStack = () => {
           transition={{ duration: 0.5 }}
           className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-6"
         >
-          My <span className="text-violet-500 bg-clip-text text-transparent">Technologies</span>
+          My <span className="text-violet-400 bg-clip-text text-transparent">Technologies</span>
         </motion.h1>
 
         <motion.p

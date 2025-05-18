@@ -50,26 +50,35 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-            className="font-bold dark:text-white tracking-wide"
+            className="font-bold dark:text-white tracking-wide text-center sm:text-left"
           >
-            <span className="text-[50px] tracking-wider sm:text-5xl md:text-5xl lg:text-7xl lg:inline-flex lg:ml-0">Software Engineer</span>
-            <br />
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl tracking-tight">
+              Software Developer
+            </span>
             <TypeAnimation
-              className="text-violet-400 text-[40px] sm:text-lg md:text-xl lg:text-7xl font-bold dark:text-violet-400 hidden lg:inline-block"
-              sequence={["Frontend Dev", 3000, "UI Designer", 3000, "Backend Dev", 3000, "Frontend Dev", 3000, "Mobile Dev", 3000, "DevOps", 3000]}
+              className="block text-xl sm:text-xl md:text-2xl lg:text-5xl xl:text-6xl font-bold text-violet-500 dark:text-violet-400"
+              sequence={[
+                "Frontend Dev", 3000,
+                "UI Designer", 3000,
+                "Backend Dev", 3000,
+                "Frontend Dev", 3000,
+                "Mobile Dev", 3000,
+                "DevOps", 3000,
+              ]}
               speed={30}
               repeat={Infinity}
               wrapper="span"
             />
           </motion.h2>
 
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
-            className="mt-6 text-xl text-neutral-800 dark:text-neutral-300 max-w-[600px]"
+            className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-neutral-800 dark:text-neutral-300 max-w-[90%] sm:max-w-[600px] text-center sm:text-left mx-auto sm:mx-0"
           >
-            I'm Kian, an <b className="text-violet-400">AI first software developer</b> crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and Artificial Intelligence.
+            I'm Kian, an <b className="text-violet-500 dark:text-violet-400 font-semibold">AI-first software developer</b> crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and AI.
           </motion.p>
 
           <motion.div

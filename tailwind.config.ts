@@ -129,7 +129,7 @@ export default {
 				{
 					"bg-dot-thick": (value: any) => ({
 						backgroundImage: `url("${svgToDataUri(
-							`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="20" height="20" fill="none">
+							`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="18" height="18" fill="none">
 							<circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="2.5"></circle>
 							</svg>`
 						)}")`,

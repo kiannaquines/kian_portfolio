@@ -39,7 +39,7 @@ const Hero = () => {
           : "bg-green-500/20 dark:bg-green-500/30 text-green-700 dark:text-green-300"
           }`}>
           <IconTools className="w-4 h-4 mr-2" />
-          {environment === "development" ? <span>Under Development</span> : <span>Production</span>}
+          {environment === "development" ? <span>Under Development | Currently Busy</span> : <span>Production</span>}
         </div>
       </motion.div>
 

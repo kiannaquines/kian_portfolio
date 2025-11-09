@@ -68,7 +68,7 @@ export const Timeline = ({ data }: { data: AboutTimelineEntry[] }) => {
         </motion.div>
       </div>
 
-      <div ref={ref} className="relative max-w-screen">
+  <div ref={ref} className="relative max-w-7xl mx-auto">
         {data.map((item, index) => (
           <motion.div
             key={index}

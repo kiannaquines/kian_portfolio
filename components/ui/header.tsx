@@ -26,14 +26,14 @@ const Header = () => {
   return (
     <header
     className={
-  `fixed top-0 left-0 w-full z-[100] flex items-center gap-10 justify-between
-   py-4 px-10 md:px-10 lg:px-28 backdrop-blur-lg
+  `fixed top-0 left-0 w-full z-[100] flex items-center gap-6 justify-between
+   py-4 px-4 sm:px-6 md:px-10 lg:px-28 backdrop-blur-lg
    transition-all duration-300
    bg-white/30 dark:bg-black/30 shadow-md`
 }
     >
-      <div className="flex md:hidden lg:inline-block items-center">
-        <span className="text-lg font-bold text-gray-900 dark:text-white">
+      <div className="flex items-center">
+        <span className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">
          <Link href="/"> &lt;Kian Naquines/&gt;</Link>
         </span>
       </div>
@@ -85,7 +85,7 @@ const Header = () => {
         )}
       </AnimatePresence>
 
-      <span className="hidden md:block text-lg text-gray-700 font-bold dark:text-gray-300">
+      <span className="hidden md:block text-base lg:text-lg text-gray-700 font-bold dark:text-gray-300">
         Asia/Manila
       </span>
     </header>

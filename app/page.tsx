@@ -9,10 +9,10 @@ import { InfiniteMovingCardsFeedback } from "@/components/infinite-project";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-1 h-screen w-full">
+    <div className="grid grid-rows-1 min-h-screen w-full">
       <Header />
       <main className="mt-[64px]">
-        <HeroHighlight containerClassName="min-h-height min-w-width" >
+        <HeroHighlight containerClassName="min-h-screen w-full">
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-10">
             <section id="hero" className="col-span-1 lg:col-span-1 min-h-screen">
               <Hero />

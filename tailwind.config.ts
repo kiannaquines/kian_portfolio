@@ -144,12 +144,22 @@ export default {
 
 
 function addVariablesForColors({ addBase, theme }: any) {
-	let allColors = flattenColorPalette(theme("colors"));
-	let newVars = Object.fromEntries(
-		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+	const allColors = flattenColorPalette(theme("colors"));
+	// Avoid creating CSS variables for colors that are already CSS-var based (prevents recursion like --background: hsl(var(--background)))
+	const safeEntries = Object.entries(allColors).filter(([, val]) => {
+		return typeof val === "string" && !val.includes("var(");
+	});
+
+	const newVars = Object.fromEntries(
+		safeEntries.map(([key, val]) => [
+			`--${key}`,
+			val,
+		])
 	);
 
-	addBase({
-		":root": newVars,
-	});
+	if (Object.keys(newVars).length) {
+		addBase({
+			":root": newVars,
+		});
+	}
 }

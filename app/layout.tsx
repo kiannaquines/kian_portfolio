@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Tektur } from "next/font/google";
-import "./globals.css";
+/* @ts-ignore - Next.js provides CSS type declarations via next-env.d.ts */
+import "./globals.css"; // Side-effect import for global styles
 import { ThemeProvider } from "@/components/theme-provider"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import "./globals.css";
 
 const tektur = Tektur({
   weight: "400",
@@ -27,6 +29,12 @@ export const metadata: Metadata = {
     siteName: 'Kian Jearard Naquines Portfolio',
   },
 }
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export default function RootLayout({
   children,

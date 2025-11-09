@@ -26,7 +26,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="w-full sm:px-10 lg:px-28 py-10 lg:py-28 mx-auto">
+  <div className="w-full px-4 sm:px-10 lg:px-28 py-10 lg:py-28 mx-auto">
 
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -45,6 +45,20 @@ const Hero = () => {
 
 
       <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 items-start">
+        {/* Mobile image shown above content */}
+        <div className="md:hidden flex justify-center mb-6">
+          <div className="relative w-full max-w-[180px] aspect-square">
+            <Image
+              src="/anime_me.png"
+              alt="Kian's anime-style portrait"
+              className="rounded-2xl object-cover w-full h-full border-4 border-violet-400 shadow-[0_0_20px_4px_rgba(124,58,237,0.4)]"
+              fill
+              sizes="(max-width: 480px) 160px, (max-width: 768px) 180px"
+              priority
+            />
+          </div>
+        </div>
+
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full z-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -97,29 +111,24 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="w-full flex justify-end"
+          className="w-full hidden md:flex justify-end"
         >
           <div
-            className="relative w-full max-w-[220px] sm:max-w-[320px] aspect-square hidden sm:hidden md:inline-block lg:inline-block"
+            className="relative w-full max-w-[220px] md:max-w-[260px] lg:max-w-[320px] aspect-square"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
-
             <motion.div
               className="absolute inset-0 w-full h-full border-[3px] border-violet-400 rounded-full"
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 6, ease: "linear" }}
             />
-
             <Image
               src="/anime_me.png"
               alt="Kian's anime-style portrait"
-              className="rounded-2xl object-cover w-full h-full border-4 border-violet-400 
-                shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] 
-                transition-all duration-300 ease-in-out 
-                hover:scale-105 hover:rotate-1"
+              className="rounded-2xl object-cover w-full h-full border-4 border-violet-400 shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] transition-all duration-300 ease-in-out hover:scale-105 hover:rotate-1"
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 200px"
+              sizes="(max-width: 1024px) 220px, 320px"
               priority
             />
           </div>

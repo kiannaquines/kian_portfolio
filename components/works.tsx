@@ -12,7 +12,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Works() {
     return (
-        <div className="w-full p-2 sm:px-10 lg:px-28 pt-10 mb-10 lg:pt-20 lg:pb-16 mx-auto sm:p-2">
+    <div className="w-full px-4 sm:px-10 lg:px-28 pt-10 mb-10 lg:pt-20 lg:pb-16 mx-auto">
             <div className="mx-auto">
                 <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4">
                     My <TypeAnimation
@@ -26,7 +26,7 @@ export default function Works() {
                 <p className="text-center text-neutral-700 dark:text-neutral-300 text-lg mb-8 max-w-2xl mx-auto p-2 sm:p-0 md:p-0 lg:p-0">
                     My projects I personally love to develop and spend time on.
                 </p>
-                <BentoGrid className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-2 sm:p-0 md:p-0 max-w-screen lg:p-0">
+                <BentoGrid className="px-2 sm:px-0">
                     {items.map((item, i) => (
                         <BentoGridItem
                             key={i}

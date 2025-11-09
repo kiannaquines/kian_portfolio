@@ -88,7 +88,8 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "relative w-full min-screen overflow-x-hidden",
+        // ensure the highlight container takes at least full viewport height
+        "relative w-full min-h-screen overflow-x-hidden",
         containerClassName
       )}
       onMouseMove={handleMouseMove}

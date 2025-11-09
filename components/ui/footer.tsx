@@ -74,7 +74,7 @@ export function Footer() {
 
   return (
     <footer id="contact" className="w-full bg-neutral-900 text-neutral-100">
-      <div className="w-full max-w-8xl mx-auto px-10 sm:px-6 lg:pl-28 lg:pr-28 lg:pt-10 pt-10">
+  <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-28 lg:pt-10 pt-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-center text-white font-bold mb-4">
           Want to <span className="text-violet-500">connect?</span>
         </h1>
@@ -82,7 +82,7 @@ export function Footer() {
           Fill out the form below or reach out directly through my contact information.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
           <div className="space-y-6">
             <h2 className="text-xl font-bold">About Me</h2>
             <div className="space-y-4">

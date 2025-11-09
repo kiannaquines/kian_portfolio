@@ -17,7 +17,7 @@ import SecondaryButton from "./ui/secondary-button";
 const Hero = () => {
 
   const [hovered, setHovered] = useState(false);
-  const [environment] = useState('development');
+  const [environment] = useState('production');
 
   const socialLinks = [
     { href: "https://github.com/kiannaquines", icon: <IconBrandGithub />, label: "GitHub" },
@@ -39,7 +39,7 @@ const Hero = () => {
           : "bg-green-500/20 dark:bg-green-500/30 text-green-700 dark:text-green-300"
           }`}>
           <IconTools className="w-4 h-4 mr-2" />
-          {environment === "development" ? <span>Under Development | Currently Busy</span> : <span>Production</span>}
+          {environment === "development" ? <span>Currently in Development</span> : <span>I'm Open to Work</span>}
         </div>
       </motion.div>
 

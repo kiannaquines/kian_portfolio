@@ -3,9 +3,10 @@ import TechStack from "@/components/tech-stack";
 import Header from "@/components/ui/header";
 import Hero from "@/components/hero";
 import TimeLine from "@/components/timeline";
-import Works from "@/components/works";
+// import Works from "@/components/works";
 import { Footer } from "@/components/ui/footer";
 import { InfiniteMovingCardsFeedback } from "@/components/infinite-project";
+import GitHubProjects from "@/components/github-projects";
 
 export default function Home() {
   return (
@@ -24,8 +25,8 @@ export default function Home() {
             <section id="timeline" className="col-span-1 lg:col-span-1">
               <TimeLine />
             </section>
-            <section id="works" className="col-span-1 md:col-span-1">
-              <Works />
+            <section id="github-projects" className="col-span-1 mb-4">
+              <GitHubProjects />
             </section>
           </div>
           <Footer />

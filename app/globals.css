@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Default 125% zoom for better readability */
+html {
+  font-size: 110%; /* Base font size increased by 25% */
+}
+
+/* Reset font size for better control on smaller screens */
+@media (max-width: 768px) {
+  html {
+    font-size: 100%; /* Normal size on mobile */
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }

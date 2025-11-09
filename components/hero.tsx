@@ -47,14 +47,15 @@ const Hero = () => {
       <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 lg:gap-10 items-center">
         {/* Mobile image shown above content */}
         <div className="md:hidden flex justify-center mb-4">
-          <div className="relative w-full max-w-[160px] sm:max-w-[180px] aspect-square">
+          <div className="relative w-full max-w-[180px] sm:max-w-[200px] aspect-square">
             <Image
               src="/anime_me.png"
               alt="Kian's anime-style portrait"
               className="rounded-2xl object-cover w-full h-full border-4 border-violet-400 shadow-[0_0_20px_4px_rgba(124,58,237,0.4)]"
               fill
-              sizes="(max-width: 480px) 160px, (max-width: 768px) 180px"
+              sizes="(max-width: 480px) 180px, 200px"
               priority
+              quality={95}
             />
           </div>
         </div>
@@ -122,7 +123,7 @@ const Hero = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="w-full hidden md:flex justify-end items-center"
         >
-          <div className="relative w-full max-w-[200px] lg:max-w-[240px] xl:max-w-[280px] aspect-square">
+          <div className="relative w-full max-w-[220px] lg:max-w-[260px] xl:max-w-[300px] aspect-square">
             <motion.div
               className="absolute inset-0 w-full h-full border-[3px] border-violet-400 rounded-full"
               animate={{ rotate: 360 }}
@@ -133,8 +134,9 @@ const Hero = () => {
               alt="Kian's anime-style portrait"
               className="rounded-2xl object-cover w-full h-full border-4 border-violet-400 shadow-[0_0_30px_5px_rgba(124,58,237,0.5)] transition-all duration-300 ease-in-out hover:scale-105 hover:rotate-1"
               fill
-              sizes="(max-width: 1024px) 220px, 320px"
+              sizes="(max-width: 768px) 200px, (max-width: 1024px) 260px, 300px"
               priority
+              quality={95}
             />
           </div>
         </motion.div>

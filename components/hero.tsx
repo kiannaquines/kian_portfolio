@@ -68,7 +68,7 @@ const Hero = () => {
             className="font-bold dark:text-white tracking-wide text-center sm:text-left"
           >
             <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-tight">
-              Full-Stack Engineer
+             AI First Full-Stack Engineer
             </span>
             <span className="mt-2 block text-sm sm:text-base md:text-lg lg:text-xl text-violet-600 dark:text-violet-400">
               Artificial Intelligence • Real-Time • Microservices • ML-Integrated Systems

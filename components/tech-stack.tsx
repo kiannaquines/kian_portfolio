@@ -38,7 +38,7 @@ const technologies = [
 
 const TechStack = () => {
   return (
-  <div className="w-full px-4 sm:px-10 lg:px-28 pt-0 lg:pt-20 mx-auto">
+  <div className="w-full px-4 sm:px-10 lg:px-28 pt-0 mx-auto">
       <div className="mx-auto text-center max-w-7xl">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

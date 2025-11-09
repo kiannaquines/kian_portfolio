@@ -5,30 +5,61 @@ import Hero from "@/components/hero";
 import TimeLine from "@/components/timeline";
 // import Works from "@/components/works";
 import { Footer } from "@/components/ui/footer";
-import { InfiniteMovingCardsFeedback } from "@/components/infinite-project";
+import { InfiniteMovingCardsShowcase } from "@/components/infinite-project";
 import GitHubProjects from "@/components/github-projects";
+import ImpactMetrics from "@/components/impact-metrics";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-1 min-h-screen w-full">
+    <div className="min-h-screen w-full bg-gradient-to-b from-white via-neutral-50 to-white dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950">
       <Header />
       <main className="mt-[64px]">
-        <HeroHighlight containerClassName="min-h-screen w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-10">
-            <section id="hero" className="col-span-1 lg:col-span-1 min-h-screen">
+        <HeroHighlight containerClassName="w-full">
+          {/* Hero Section - Full viewport with CTA */}
+          <section id="hero" className="min-h-[85vh] flex items-center justify-center py-12 sm:py-16">
+            <div className="w-full">
               <Hero />
-              <InfiniteMovingCardsFeedback />
-            </section>
-            <section id="tech" className="col-span-1 lg:col-span-1">
-              <TechStack />
-            </section>
-            <section id="timeline" className="col-span-1 lg:col-span-1">
-              <TimeLine />
-            </section>
-            <section id="github-projects" className="col-span-1 mb-4">
+            </div>
+          </section>
+
+          {/* Impact Metrics - Showcase achievements */}
+          <section id="impact" className="w-full py-12 sm:py-16 lg:py-20">
+            <div className="px-4 sm:px-10 lg:px-28">
+              <ImpactMetrics />
+            </div>
+          </section>
+
+          {/* Tech Stack Showcase - Infinite scroll */}
+          <section id="showcase" className="w-full py-8 sm:py-12 lg:py-16 bg-gradient-to-b from-transparent via-neutral-50/50 to-transparent dark:via-neutral-900/50">
+            <div className="px-4 sm:px-10 lg:px-28 mb-8">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-neutral-900 dark:text-white mb-4">
+                Portfolio <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Highlights</span>
+              </h2>
+              <p className="text-center text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto text-base sm:text-lg">
+                Key features and technologies that power this portfolio
+              </p>
+            </div>
+            <InfiniteMovingCardsShowcase />
+          </section>
+
+          {/* Tech Stack Grid - All technologies */}
+          <section id="tech" className="w-full py-12 sm:py-16 lg:py-24">
+            <TechStack />
+          </section>
+
+          {/* GitHub Projects - Live work showcase */}
+          <section id="projects" className="w-full py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-transparent via-violet-50/30 to-transparent dark:via-violet-950/20">
+            <div className="px-4 sm:px-10 lg:px-28">
               <GitHubProjects />
-            </section>
-          </div>
+            </div>
+          </section>
+
+          {/* Timeline - Professional journey */}
+          <section id="timeline" className="w-full py-12 sm:py-16 lg:py-24">
+            <TimeLine />
+          </section>
+
+          {/* Footer */}
           <Footer />
         </HeroHighlight>
       </main>

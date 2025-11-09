@@ -11,9 +11,10 @@ export const InfiniteMovingCards = ({
     className,
 }: {
     items: {
-        feedback: string;
+        icon: string;
         name: string;
-        title: string;
+        description: string;
+        category: string;
     }[];
     direction?: "left" | "right";
     speed?: "fast" | "normal" | "slow";
@@ -87,28 +88,23 @@ export const InfiniteMovingCards = ({
             >
                 {items.map((item, idx) => (
                         <li
-                        className="relative w-[200px] sm:w-[220px] md:w-[260px] lg:w-[300px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-200 bg-[linear-gradient(180deg,#fafafa,#f5f5f5)] px-5 py-4 dark:border-zinc-700 dark:bg-[linear-gradient(180deg,#27272a,#18181b)]"
+                        className="relative w-[200px] sm:w-[220px] md:w-[260px] lg:w-[300px] max-w-full shrink-0 rounded-2xl border border-zinc-200 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm px-6 py-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 dark:border-zinc-700"
                         key={item.name}
                     >
-                        <blockquote>
-                            <div
-                                aria-hidden="true"
-                                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-                            ></div>
-                            <span className="relative z-20 text-sm leading-[1.4] font-normal text-neutral-800 dark:text-gray-100">
-                                {item.feedback}
-                            </span>
-                            <div className="relative z-20 mt-4 flex flex-row items-center">
-                                <span className="flex flex-col gap-1">
-                                    <span className="text-xs leading-[1.4] font-normal text-neutral-500 dark:text-gray-400">
-                                        {item.name}
-                                    </span>
-                                    <span className="text-xs leading-[1.4] font-normal text-neutral-500 dark:text-gray-400">
-                                        {item.title}
-                                    </span>
+                        <div className="flex flex-col gap-3">
+                            <div className="text-3xl">{item.icon}</div>
+                            <h3 className="text-lg font-bold text-neutral-900 dark:text-white">
+                                {item.name}
+                            </h3>
+                            <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+                                {item.description}
+                            </p>
+                            <div className="mt-2">
+                                <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+                                    {item.category}
                                 </span>
                             </div>
-                        </blockquote>
+                        </div>
                     </li>
                 ))}
             </ul>
@@ -116,11 +112,11 @@ export const InfiniteMovingCards = ({
     );
 };
 
-export function InfiniteMovingCardsFeedback() {
+export function InfiniteMovingCardsShowcase() {
     return (
         <div className="rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden mb-10">
             <InfiniteMovingCards
-                items={feedbackList}
+                items={techStackList}
                 direction="right"
                 speed="slow"
             />
@@ -128,50 +124,59 @@ export function InfiniteMovingCardsFeedback() {
     );
 }
 
-const feedbackList = [
+const techStackList = [
     {
-        feedback: "Your work is amazing! The interface is clean, intuitive, and very easy to use. Great job!",
-        name: "Jennifer",
-        title: "Financial Management Project",
+        icon: "⚡",
+        name: "High Performance",
+        description: "Built with Next.js 14 and React Server Components for lightning-fast load times and optimal SEO.",
+        category: "Performance",
     },
     {
-        feedback: "You did an excellent job optimizing the system! It's fast and runs smoothly, even on mobile.",
-        name: "Irish",
-        title: "Sta. Catalina Automated Booking Software",
+        icon: "🎨",
+        name: "Modern Design",
+        description: "Crafted with Tailwind CSS and Framer Motion for stunning animations and responsive layouts.",
+        category: "UI/UX",
     },
     {
-        feedback: "I really appreciate the attention to detail in your design! The UI is modern and visually appealing.",
-        name: "Shiela",
-        title: "Radio Station Log Management Software",
+        icon: "🔒",
+        name: "Type Safety",
+        description: "Developed with TypeScript to ensure robust code quality and catch errors before runtime.",
+        category: "Development",
     },
     {
-        feedback: "Your development skills are impressive! Everything is well-structured and easy to navigate.",
-        name: "Kevin",
-        title: "Tourism Management Software",
+        icon: "🚀",
+        name: "Cloud Deployment",
+        description: "Deployed on Vercel with automatic CI/CD, edge functions, and global CDN distribution.",
+        category: "Infrastructure",
     },
     {
-        feedback: "Great work on making file uploads seamless! The process is smooth and hassle-free.",
-        name: "Catherine",
-        title: "Financial Management Software",
+        icon: "📊",
+        name: "Real-time Data",
+        description: "Integrates with GitHub API to dynamically showcase live project statistics and repositories.",
+        category: "Integration",
     },
     {
-        feedback: "The features you implemented are incredibly useful! They make management tasks so much easier.",
-        name: "Nikie",
-        title: "Irrigation Management Software",
+        icon: "🌓",
+        name: "Dark Mode",
+        description: "Full dark mode support with seamless theme switching and system preference detection.",
+        category: "Accessibility",
     },
     {
-        feedback: "Your coding skills are top-notch! The system is user-friendly and very reliable.",
-        name: "Lyndawn",
-        title: "Dormitory Management Software",
+        icon: "📱",
+        name: "Mobile First",
+        description: "Responsive design that looks perfect on any device, from smartphones to ultrawide monitors.",
+        category: "Responsive",
     },
     {
-        feedback: "Fantastic job on the system’s performance! Everything runs efficiently without any issues.",
-        name: "Cristine",
-        title: "Lition's Agri Buy & Sale Software",
+        icon: "🎯",
+        name: "SEO Optimized",
+        description: "Meta tags, Open Graph, and structured data for maximum visibility on search engines.",
+        category: "Marketing",
     },
     {
-        feedback: "You built an amazing system! It has greatly improved our workflow and productivity.",
-        name: "Karen",
-        title: "Seaoil Management Software",
+        icon: "⚙️",
+        name: "Best Practices",
+        description: "Following industry standards with clean code architecture, component reusability, and maintainability.",
+        category: "Code Quality",
     },
 ];

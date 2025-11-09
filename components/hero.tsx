@@ -1,53 +1,53 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useState } from "react";
-import { TypeAnimation } from "react-type-animation";
+import React from "react";
 import PrimaryButton from "./ui/primary-button";
 import {
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBrandTwitter,
-  IconUserScan,
+  IconCalendar,
+  IconFileText,
+  IconMail,
   IconTools,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import SecondaryButton from "./ui/secondary-button";
 
 const Hero = () => {
+  const handleViewResume = () => {
+    window.open(
+      "/Kian Jearard G. Naquines - Python Full Stack Developer.pdf",
+      "_blank"
+    );
+  };
 
-  const [hovered, setHovered] = useState(false);
-  const [environment] = useState('production');
+  const handleBookIntro = () => {
+    window.location.href =
+      "mailto:kjgnaquines@gmail.com?subject=Intro%20Call%20with%20Kian&body=Hi%20Kian%2C%0A%0AI'd%20like%20to%20schedule%20a%2015-minute%20intro%20call.%20Here%20are%20some%20times%20that%20work%20for%20me%3A%0A-%20%0A-%20%0A%0ABest%2C%0A";
+  };
 
-  const socialLinks = [
-    { href: "https://github.com/kiannaquines", icon: <IconBrandGithub />, label: "GitHub" },
-    { href: "https://www.linkedin.com/in/kian-jearard-naquines-7406772a8/", icon: <IconBrandLinkedin />, label: "LinkedIn" },
-    { href: "https://twitter.com/yourusername", icon: <IconBrandTwitter />, label: "Twitter" },
-  ];
+  const handleEmailMe = () => {
+    window.location.href =
+      "mailto:kjgnaquines@gmail.com?subject=Hello%20Kian&body=Hi%20Kian%2C%0A%0AI'm%20reaching%20out%20after%20seeing%20your%20portfolio.%20%0A%0AThanks%2C%0A";
+  };
 
   return (
-  <div className="w-full px-4 sm:px-10 lg:px-28 py-10 lg:py-28 mx-auto">
-
+    <div className="w-full px-4 sm:px-10 lg:px-28 py-8 sm:py-12 lg:py-16 mx-auto">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="flex justify-center md:justify-start mb-6"
+        className="flex justify-center md:justify-start mb-4 sm:mb-6"
       >
-        <div className={`flex items-center px-4 py-2 rounded-full text-sm font-medium ${environment === "development"
-          ? "bg-yellow-500/20 dark:bg-yellow-500/30 text-yellow-700 dark:text-yellow-300"
-          : "bg-green-500/20 dark:bg-green-500/30 text-green-700 dark:text-green-300"
-          }`}>
+        <div className="flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-500/20 dark:bg-green-500/30 text-green-700 dark:text-green-300">
           <IconTools className="w-4 h-4 mr-2" />
-          {environment === "development" ? <span>Currently in Development</span> : <span>I'm Open to Work</span>}
+          <span>I'm Open to Work</span>
         </div>
       </motion.div>
 
-
-      <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6 lg:gap-10 items-center">
         {/* Mobile image shown above content */}
-        <div className="md:hidden flex justify-center mb-6">
-          <div className="relative w-full max-w-[180px] aspect-square">
+        <div className="md:hidden flex justify-center mb-4">
+          <div className="relative w-full max-w-[160px] sm:max-w-[180px] aspect-square">
             <Image
               src="/anime_me.png"
               alt="Kian's anime-style portrait"
@@ -60,50 +60,59 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full z-10">
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
             className="font-bold dark:text-white tracking-wide text-center sm:text-left"
           >
-            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl tracking-tight">
-              Software Developer
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-tight">
+              Full-Stack Engineer
             </span>
-            <TypeAnimation
-              className="block text-xl sm:text-xl md:text-2xl lg:text-5xl xl:text-6xl font-bold text-violet-500 dark:text-violet-400"
-              sequence={[
-                "Frontend Dev", 3000,
-                "UI Designer", 3000,
-                "Backend Dev", 3000,
-                "Frontend Dev", 3000,
-                "Mobile Dev", 3000,
-                "DevOps", 3000,
-              ]}
-              speed={30}
-              repeat={Infinity}
-              wrapper="span"
-            />
-          </motion.h2>
-
+            <span className="mt-2 block text-sm sm:text-base md:text-lg lg:text-xl text-violet-600 dark:text-violet-400">
+              Artificial Intelligence • Real-Time • Microservices • ML-Integrated Systems
+            </span>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.2 }}
-            className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-neutral-800 dark:text-neutral-300 max-w-[90%] sm:max-w-[600px] text-center sm:text-left mx-auto sm:mx-0"
+            transition={{
+              duration: 0.5,
+              ease: [0.4, 0.0, 0.2, 1],
+              delay: 0.2,
+            }}
+            className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-neutral-800 dark:text-neutral-300 max-w-[90%] sm:max-w-[700px] text-center sm:text-left mx-auto sm:mx-0 leading-relaxed"
           >
-            I'm Kian, an <b className="text-violet-500 dark:text-violet-400 font-semibold">AI-first software developer</b> crafting full-stack web and mobile applications. After hours, I build my own projects with Machine Learning and AI.
+            I design, build, and ship reliable web and mobile systems with an AI-first
+            mindset—recent work includes real-time data pipelines, ML-powered product
+            features, and tooling that speeds up delivery.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1], delay: 0.4 }}
-            className="mt-6 flex flex-wrap justify-center md:justify-start gap-3"
+            className="mt-4 sm:mt-6 flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3"
           >
-            <PrimaryButton title="Resume" className="font-semibold min-w-[120px] bg-neutral-800 text-white transition-all duration-300 p-3" />
-            <PrimaryButton title="About Me" icon={<IconUserScan />} className="min-w-[120px] bg-neutral-800 text-white transition-all duration-300 p-3" />
-            <SecondaryButton onClick={() => window.location.href = 'mailto:kjgnaquines@gmail.com'} title="Hire Me" className="font-semibold min-w-[120px] bg-transparent border border-violet-00 text-violet-400 hover:bg-violet-400 hover:text-white transition-colors custom-hover" />
+            <PrimaryButton
+              title="View Resume"
+              icon={<IconFileText />}
+              className="font-semibold min-w-[150px] bg-neutral-800 text-white transition-all duration-300 p-3"
+              onClick={handleViewResume}
+            />
+            <PrimaryButton
+              title="Book Intro Call"
+              icon={<IconCalendar />}
+              className="min-w-[160px] bg-neutral-800 text-white transition-all duration-300 p-3"
+              onClick={handleBookIntro}
+            />
+            <SecondaryButton
+              onClick={handleEmailMe}
+              title="Email Me"
+              icon={<IconMail />}
+              className="font-semibold min-w-[130px] bg-transparent border border-violet-00 text-violet-400 hover:bg-violet-400 hover:text-white transition-colors custom-hover"
+            />
           </motion.div>
         </div>
 
@@ -111,13 +120,9 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="w-full hidden md:flex justify-end"
+          className="w-full hidden md:flex justify-end items-center"
         >
-          <div
-            className="relative w-full max-w-[220px] md:max-w-[260px] lg:max-w-[320px] aspect-square"
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-          >
+          <div className="relative w-full max-w-[200px] lg:max-w-[240px] xl:max-w-[280px] aspect-square">
             <motion.div
               className="absolute inset-0 w-full h-full border-[3px] border-violet-400 rounded-full"
               animate={{ rotate: 360 }}
@@ -133,7 +138,6 @@ const Hero = () => {
             />
           </div>
         </motion.div>
-
       </div>
     </div>
   );

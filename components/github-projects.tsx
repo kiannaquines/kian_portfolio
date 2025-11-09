@@ -34,7 +34,14 @@ export default function GitHubProjects() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       const newRepos: Repo[] = data.repos || [];
-      setRepos((prev) => [...prev, ...newRepos]);
+      
+      // Remove duplicates by filtering out repos that already exist
+      setRepos((prev) => {
+        const existingIds = new Set(prev.map(r => r.id));
+        const uniqueNewRepos = newRepos.filter(repo => !existingIds.has(repo.id));
+        return [...prev, ...uniqueNewRepos];
+      });
+      
       setPage(nextPage);
       // If API returned fewer than requested, we've reached the end
       if (newRepos.length < perPage) setHasMore(false);
